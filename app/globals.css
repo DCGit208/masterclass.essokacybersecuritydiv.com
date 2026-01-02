@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 5, 7, 20;
+  --background-end-rgb: 10, 14, 39;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyber-accent to-primary-400;
+  }
+  
+  .cyber-glow {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5),
+                 0 0 20px rgba(0, 240, 255, 0.3),
+                 0 0 30px rgba(0, 240, 255, 0.2);
+  }
+  
+  .card-glow {
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.1),
+                0 0 40px rgba(0, 240, 255, 0.05);
+  }
+}
