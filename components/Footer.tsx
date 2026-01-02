@@ -81,7 +81,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-cyber-accent/20 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Essoka Cybersecurity Division. All rights reserved. | BTH Education Group
+            © {currentYear} Essoka Cybersecurity Division. All rights reserved. | BTH Education Group - ICD
           </p>
           <p className="text-gray-500 text-xs mt-2">
             Powered by world-class cybersecurity expertise

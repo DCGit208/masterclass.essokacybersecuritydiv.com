@@ -46,7 +46,7 @@ const FeaturedProgram = () => {
           <div className="mb-8 p-6 bg-cyber-accent/5 border-l-4 border-cyber-accent rounded-lg">
             <p className="text-white text-lg leading-relaxed">
               This isn't just training; it's a <span className="text-cyber-accent font-bold">world-class, market-leading offensive security solution</span>. 
-              BTH Education Group presents an irresistible, comprehensive program designed for organizations that demand nothing less than the best in 2026.
+              Essoka Cybersecurity Division presents an irresistible, comprehensive program designed for organizations that demand nothing less than the best in 2026.
             </p>
             <p className="text-cyber-gold font-semibold mt-4 text-xl">
               We don't teach theory; we forge CEH Masters capable of stopping sophisticated AI-driven threats.

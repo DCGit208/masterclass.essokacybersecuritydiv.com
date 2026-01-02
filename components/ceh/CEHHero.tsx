@@ -47,7 +47,7 @@ const CEHHero = () => {
           <div className="bg-cyber-accent/10 border-l-4 border-cyber-accent rounded-lg p-6 mb-8 max-w-4xl mx-auto text-left">
             <p className="text-white text-lg leading-relaxed mb-4">
               <strong className="text-cyber-accent">This isn't just training;</strong> it's a world-class, 
-              market-leading offensive security solution. BTH Education Group presents an irresistible, 
+              market-leading offensive security solution. Essoka Cybersecurity Division presents an irresistible, 
               comprehensive program designed for organizations that demand nothing less than the best in 2026.
             </p>
             <p className="text-cyber-gold font-bold text-xl">
