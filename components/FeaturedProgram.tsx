@@ -45,11 +45,11 @@ const FeaturedProgram = () => {
           {/* Key Message */}
           <div className="mb-8 p-6 bg-cyber-accent/5 border-l-4 border-cyber-accent rounded-lg">
             <p className="text-white text-lg leading-relaxed">
-              This isn't just training; it's a <span className="text-cyber-accent font-bold">world-class, market-leading offensive security solution</span>. 
+              This isn&apos;t just training; it&apos;s a <span className="text-cyber-accent font-bold">world-class, market-leading offensive security solution</span>. 
               Essoka Cybersecurity Division presents an irresistible, comprehensive program designed for organizations that demand nothing less than the best in 2026.
             </p>
             <p className="text-cyber-gold font-semibold mt-4 text-xl">
-              We don't teach theory; we forge CEH Masters capable of stopping sophisticated AI-driven threats.
+              We don&apos;t teach theory; we forge CEH Masters capable of stopping sophisticated AI-driven threats.
             </p>
           </div>
 
@@ -83,7 +83,7 @@ const FeaturedProgram = () => {
               </motion.button>
             </Link>
             <p className="text-gray-400 text-sm mt-4">
-              🔥 Secure your team's future. Don't wait for a breach to train your defense.
+              🔥 Secure your team&apos;s future. Don&apos;t wait for a breach to train your defense.
             </p>
           </div>
         </motion.div>

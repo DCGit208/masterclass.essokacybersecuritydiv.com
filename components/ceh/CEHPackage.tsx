@@ -66,7 +66,7 @@ const CEHPackage = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-4">
             Here is exactly what you get with our <span className="text-cyber-gold font-bold">$5000</span> investment 
-            in your enterprise's security posture:
+            in your enterprise&apos;s security posture:
           </p>
         </motion.div>
 
@@ -114,10 +114,10 @@ const CEHPackage = () => {
             Become a Market Leader.
           </h3>
           <p className="text-xl text-gray-300 mb-6">
-            Secure your team's future. Only <span className="text-cyber-red font-bold">20 slots available</span> for this exclusive program.
+            Secure your team&apos;s future. Only <span className="text-cyber-red font-bold">20 slots available</span> for this exclusive program.
           </p>
           <p className="text-2xl font-bold text-cyber-gold mb-8">
-            ⚠️ Don't wait for a breach to train your defense. Secure your spot today.
+            ⚠️ Don&apos;t wait for a breach to train your defense. Secure your spot today.
           </p>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">

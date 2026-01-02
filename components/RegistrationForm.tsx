@@ -78,7 +78,7 @@ const RegistrationForm = ({ program }: RegistrationFormProps) => {
             Register Your <span className="text-gradient">Interest</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Fill out the form below and we'll contact you with enrollment details
+            Fill out the form below and we&apos;ll contact you with enrollment details
           </p>
         </motion.div>
 

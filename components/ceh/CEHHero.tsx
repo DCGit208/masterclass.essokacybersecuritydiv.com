@@ -46,12 +46,12 @@ const CEHHero = () => {
           {/* Key Message */}
           <div className="bg-cyber-accent/10 border-l-4 border-cyber-accent rounded-lg p-6 mb-8 max-w-4xl mx-auto text-left">
             <p className="text-white text-lg leading-relaxed mb-4">
-              <strong className="text-cyber-accent">This isn't just training;</strong> it's a world-class, 
+              <strong className="text-cyber-accent">This isn&apos;t just training;</strong> it&apos;s a world-class, 
               market-leading offensive security solution. Essoka Cybersecurity Division presents an irresistible, 
               comprehensive program designed for organizations that demand nothing less than the best in 2026.
             </p>
             <p className="text-cyber-gold font-bold text-xl">
-              We don't teach theory; we forge CEH Masters capable of stopping sophisticated AI-driven threats.
+              We don&apos;t teach theory; we forge CEH Masters capable of stopping sophisticated AI-driven threats.
             </p>
           </div>
 

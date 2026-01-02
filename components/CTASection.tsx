@@ -20,7 +20,7 @@ const CTASection = () => {
             Ready to <span className="text-gradient">Transform</span> Your Team?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Don't wait for a breach to train your defense. Secure your spot in our exclusive masterclass programs today.
+            Don&apos;t wait for a breach to train your defense. Secure your spot in our exclusive masterclass programs today.
           </p>
 
           {/* Contact Cards */}
