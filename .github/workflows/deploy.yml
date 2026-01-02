@@ -29,7 +29,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.essokacorp.com
-          username: ECSDmasterclass2026
+          username: masterclass2026
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /masterclass/
           exclude: |
