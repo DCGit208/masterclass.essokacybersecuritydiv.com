@@ -31,7 +31,7 @@ jobs:
           server: ftp.essokacybersecuritydiv.com
           username: masterclass2026
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /masterclass/
+          server-dir: /
           exclude: |
             **/.git*
             **/.git*/**
