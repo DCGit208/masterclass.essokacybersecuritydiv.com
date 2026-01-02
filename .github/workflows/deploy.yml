@@ -25,13 +25,14 @@ jobs:
       - name: Build Next.js application
         run: npm run build
 
-      - name: Deploy to FTP
+      - name: 📂 Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.essokacybersecuritydiv.com
           username: masterclass2026
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /
+          local-dir: ./out/
           exclude: |
             **/.git*
             **/.git*/**
