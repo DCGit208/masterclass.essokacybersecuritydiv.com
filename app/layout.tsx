@@ -12,9 +12,24 @@ const rajdhani = Rajdhani({
 })
 
 export const metadata: Metadata = {
-  title: 'ECSD Masterclass | World-Class Cybersecurity Training',
-  description: 'Elite cybersecurity training programs from Essoka Cybersecurity Division. CEH Master, VAPT, Cyber Forensics, and more.',
-  keywords: 'cybersecurity training, CEH master, penetration testing, VAPT, cyber forensics, enterprise security',
+  title: {
+    default: 'ECSD Masterclass - Elite Cybersecurity Training | CEH Master Certification 2026',
+    template: '%s | ECSD Masterclass'
+  },
+  description: 'World-class cybersecurity masterclass programs. CEH Elite v13 Master certification, VAPT training, cyber forensics, and enterprise security solutions. Only 20 slots available for $5,000.',
+  keywords: 'cybersecurity training, CEH Master certification, ethical hacking course, penetration testing training, VAPT certification, cybersecurity masterclass, EC-Council CEH, cyber security course Cameroon, offensive security training, enterprise security training',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://masterclass.essokacybersecuritydiv.com',
+    siteName: 'ECSD Masterclass',
+    title: 'ECSD Masterclass - Elite Cybersecurity Training | CEH Master Certification',
+    description: 'World-class CEH Elite v13 Master certification and cybersecurity training programs. Transform your team with market-leading offensive security expertise.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({

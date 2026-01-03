@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaEnvelope, FaPhone, FaRocket } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaRocket, FaWhatsapp } from 'react-icons/fa'
 import Link from 'next/link'
 
 const CTASection = () => {
@@ -25,7 +25,7 @@ const CTASection = () => {
           </p>
 
           {/* Contact Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
             <motion.a
               href="mailto:dr.coachachu@essokacybersecuritydiv.com"
               whileHover={{ scale: 1.05 }}
@@ -47,6 +47,20 @@ const CTASection = () => {
               <div className="text-left">
                 <div className="text-gray-400 text-sm">Call Us (CAM)</div>
                 <div className="text-white font-semibold text-lg">+237 677 60 41 00</div>
+              </div>
+            </motion.a>
+
+            <motion.a
+              href="https://wa.me/237677604100?text=Hi,%20I'm%20interested%20in%20the%20ECSD%20Masterclass%20programs"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              className="bg-cyber-darker/80 border-2 border-green-500/30 rounded-xl p-6 hover:border-green-500 transition-all flex items-center justify-center space-x-3 group"
+            >
+              <FaWhatsapp className="text-2xl text-green-500 group-hover:scale-110 transition-transform" />
+              <div className="text-left">
+                <div className="text-gray-400 text-sm">WhatsApp</div>
+                <div className="text-white font-semibold text-lg">Chat Now</div>
               </div>
             </motion.a>
           </div>

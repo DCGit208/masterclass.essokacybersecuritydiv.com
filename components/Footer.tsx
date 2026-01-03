@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { FaLinkedin, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt, FaShieldAlt } from 'react-icons/fa'
+import { FaLinkedin, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt, FaShieldAlt, FaWhatsapp } from 'react-icons/fa'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -68,6 +68,12 @@ const Footer = () => {
                 <FaPhone className="text-cyber-accent mt-1 flex-shrink-0" />
                 <a href="tel:+237677604100" className="hover:text-cyber-accent transition-colors">
                   +237 677 60 41 00
+                </a>
+              </li>
+              <li className="flex items-start space-x-2 text-gray-400">
+                <FaWhatsapp className="text-green-500 mt-1 flex-shrink-0" />
+                <a href="https://wa.me/237677604100?text=Hi,%20I'm%20interested%20in%20ECSD%20Masterclass" target="_blank" rel="noopener noreferrer" className="hover:text-green-500 transition-colors">
+                  WhatsApp Chat
                 </a>
               </li>
               <li className="flex items-start space-x-2 text-gray-400">
