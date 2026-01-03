@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { FaLinkedin, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt, FaShieldAlt } from 'react-icons/fa'
+import { FaLinkedin, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt, FaShieldAlt } from 'react-icons/fa'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -20,13 +20,13 @@ const Footer = () => {
               World-class cybersecurity training programs for enterprises and professionals.
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" 
+              <a href="https://www.linkedin.com/in/drcoachachugustave" target="_blank" rel="noopener noreferrer" 
                 className="text-gray-400 hover:text-cyber-accent transition-colors">
                 <FaLinkedin className="text-xl" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://facebook.com/essokacyberdiv" target="_blank" rel="noopener noreferrer"
                 className="text-gray-400 hover:text-cyber-accent transition-colors">
-                <FaTwitter className="text-xl" />
+                <FaFacebook className="text-xl" />
               </a>
             </div>
           </div>
