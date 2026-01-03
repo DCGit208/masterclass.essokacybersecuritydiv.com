@@ -4,6 +4,10 @@ import { motion } from 'framer-motion'
 import { FaBug, FaSearch, FaCode, FaShieldAlt, FaBalanceScale, FaNetworkWired } from 'react-icons/fa'
 
 const MasterclassCategories = () => {
+  const scrollToRegistration = () => {
+    const registrationSection = document.getElementById('register')
+    registrationSection?.scrollIntoView({ behavior: 'smooth' })
+  }
   const categories = [
     {
       icon: <FaBug className="text-4xl" />,
@@ -91,8 +95,11 @@ const MasterclassCategories = () => {
                   </div>
                 ))}
               </div>
-              <button className="mt-6 w-full bg-cyber-accent/10 hover:bg-cyber-accent/20 text-cyber-accent py-2 rounded-lg font-semibold transition-all">
-                Learn More
+              <button 
+                onClick={scrollToRegistration}
+                className="mt-6 w-full bg-cyber-accent/10 hover:bg-cyber-accent/20 text-cyber-accent py-2 rounded-lg font-semibold transition-all"
+              >
+                Inquire Now
               </button>
             </motion.div>
           ))}

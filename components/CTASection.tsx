@@ -4,6 +4,10 @@ import { motion } from 'framer-motion'
 import { FaEnvelope, FaPhone, FaRocket } from 'react-icons/fa'
 
 const CTASection = () => {
+  const scrollToRegistration = () => {
+    const registrationSection = document.getElementById('register')
+    registrationSection?.scrollIntoView({ behavior: 'smooth' })
+  }
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-cyber-darker to-cyber-dark relative overflow-hidden">
       <div className="absolute top-10 left-10 w-96 h-96 bg-cyber-accent/10 rounded-full blur-3xl animate-pulse-slow" />
@@ -52,6 +56,7 @@ const CTASection = () => {
 
           {/* Primary CTA Button */}
           <motion.button
+            onClick={scrollToRegistration}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-cyber-accent text-cyber-darker px-12 py-5 rounded-xl font-bold text-xl inline-flex items-center space-x-3 hover:shadow-2xl hover:shadow-cyber-accent/50 transition-all"
