@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { FaPaperPlane, FaCheckCircle } from 'react-icons/fa'
 
 interface RegistrationFormProps {
-  program: string
+  program?: string
 }
 
 interface FormData {
@@ -19,7 +19,7 @@ interface FormData {
   message: string
 }
 
-const RegistrationForm = ({ program }: RegistrationFormProps) => {
+const RegistrationForm = ({ program = "General Inquiry" }: RegistrationFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>()
@@ -65,7 +65,7 @@ const RegistrationForm = ({ program }: RegistrationFormProps) => {
   }
 
   return (
-    <section className="py-20 bg-cyber-dark">
+    <section id="register" className="py-20 bg-cyber-dark">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
