@@ -7,7 +7,7 @@ const MasterclassCategories = () => {
   const categories = [
     {
       icon: <FaBug className="text-4xl" />,
-      title: 'VAPT & Penetration Testing',
+      title: 'VAPT (Vulnerability Assessment & Penetration Testing)',
       description: 'Master offensive security techniques and vulnerability assessment methodologies',
       programs: ['CEH Master', 'OSCP Prep', 'Advanced Web App Security']
     },
