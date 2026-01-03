@@ -38,7 +38,7 @@ const Footer = () => {
               <li><Link href="/" className="text-gray-400 hover:text-cyber-accent transition-colors">Home</Link></li>
               <li><Link href="/#programs" className="text-gray-400 hover:text-cyber-accent transition-colors">Programs</Link></li>
               <li><Link href="/masterclass/ceh-elite-v13" className="text-gray-400 hover:text-cyber-accent transition-colors">CEH Elite v13</Link></li>
-              <li><Link href="/#about" className="text-gray-400 hover:text-cyber-accent transition-colors">About Us</Link></li>
+              <li><Link href="/#register" className="text-gray-400 hover:text-cyber-accent transition-colors">Register</Link></li>
             </ul>
           </div>
 
