@@ -25,6 +25,9 @@ jobs:
       - name: Build Next.js application
         run: npm run build
 
+      - name: Copy .htaccess to output
+        run: cp public/.htaccess out/.htaccess
+
       - name: 📂 Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

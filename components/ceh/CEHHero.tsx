@@ -56,7 +56,7 @@ const CEHHero = () => {
           </div>
 
           {/* Quick Stats */}
-          <div className="flex flex-wrap justify-center gap-6 mb-6">
+          <div className="flex flex-wrap justify-center gap-6">
             <div className="bg-cyber-darker/80 border border-cyber-accent/30 rounded-lg px-8 py-4">
               <div className="text-3xl font-bold text-cyber-accent font-rajdhani">$5,000</div>
               <div className="text-gray-400 text-sm">Investment</div>
@@ -70,20 +70,6 @@ const CEHHero = () => {
               <div className="text-gray-400 text-sm">Latest Version</div>
             </div>
           </div>
-
-          {/* CEH Official Link */}
-          <p className="text-gray-400 text-sm">
-            Certified by{' '}
-            <a 
-              href="https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-cyber-accent hover:text-cyber-gold transition-colors underline"
-            >
-              EC-Council
-            </a>
-            {' '}— The world&apos;s leading cybersecurity certification body
-          </p>
         </motion.div>
       </div>
     </section>

@@ -19,16 +19,6 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               World-class cybersecurity training programs for enterprises and professionals.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/in/drcoachachugustave" target="_blank" rel="noopener noreferrer" 
-                className="text-gray-400 hover:text-cyber-accent transition-colors">
-                <FaLinkedin className="text-xl" />
-              </a>
-              <a href="https://facebook.com/essokacyberdiv" target="_blank" rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyber-accent transition-colors">
-                <FaFacebook className="text-xl" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
