@@ -46,11 +46,11 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4 font-rajdhani">Training Areas</h4>
             <ul className="space-y-2 text-sm">
-              <li className="text-gray-400">VAPT & Penetration Testing</li>
-              <li className="text-gray-400">Cyber Forensics</li>
-              <li className="text-gray-400">Software Security</li>
-              <li className="text-gray-400">Network Defense</li>
-              <li className="text-gray-400">Governance & Compliance</li>
+              <li><Link href="/#programs" className="text-gray-400 hover:text-cyber-accent transition-colors">VAPT & Penetration Testing</Link></li>
+              <li><Link href="/#programs" className="text-gray-400 hover:text-cyber-accent transition-colors">Cyber Forensics</Link></li>
+              <li><Link href="/#programs" className="text-gray-400 hover:text-cyber-accent transition-colors">Software Security</Link></li>
+              <li><Link href="/#programs" className="text-gray-400 hover:text-cyber-accent transition-colors">Network Defense</Link></li>
+              <li><Link href="/#programs" className="text-gray-400 hover:text-cyber-accent transition-colors">Governance & Compliance</Link></li>
             </ul>
           </div>
 
