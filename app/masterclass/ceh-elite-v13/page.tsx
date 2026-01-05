@@ -1,19 +1,35 @@
-import CEHHero from '@/components/ceh/CEHHero'
-import CEHPackage from '@/components/ceh/CEHPackage'
-import CEHTarget from '@/components/ceh/CEHTarget'
-import CEHCountdown from '@/components/ceh/CEHCountdown'
-import RegistrationForm from '@/components/RegistrationForm'
+// New V2 High-Conversion Components
+import CEHNavigation from '@/components/ceh/v2/CEHNavigation'
+import CEHHeroV2 from '@/components/ceh/v2/CEHHeroV2'
+import CEHFit from '@/components/ceh/v2/CEHFit'
+import CEHOutcomes from '@/components/ceh/v2/CEHOutcomes'
+import CEHElite from '@/components/ceh/v2/CEHElite'
+import CEHStructure from '@/components/ceh/v2/CEHStructure'
+import CEHInstructor from '@/components/ceh/v2/CEHInstructor'
+import CEHTrust from '@/components/ceh/v2/CEHTrust'
+import CEHCohort from '@/components/ceh/v2/CEHCohort'
+import CEHApply from '@/components/ceh/v2/CEHApply'
+import CEHFAQ from '@/components/ceh/v2/CEHFAQ'
 
 export const metadata = {
-  title: 'CEH Elite v13 Masterclass | ECSD',
-  description: 'Enterprise Security Masterclass: Achieve Elite CEH Master Status. World-class offensive security training for 2026. Only 20 slots - $5,000 investment.',
+  title: 'CEH Elite V13 – Enterprise Ethical Hacking & Red Team Masterclass (Application Only) | ECSD',
+  description: 'High-ticket CEH Elite V13 masterclass for senior cybersecurity professionals. Enterprise labs, red team simulations, mentorship, interview-only enrollment. Apply now.',
+  keywords: 'CEH Elite V13, enterprise ethical hacking, red team training, senior security professional, CEH Master certification, penetration testing masterclass, cybersecurity consulting, offensive security training, application only CEH, interview-only enrollment',
   alternates: {
     canonical: '/masterclass/ceh-elite-v13',
   },
   openGraph: {
-    title: 'CEH Elite v13 Master Certification - Premium Cybersecurity Training',
-    description: 'Transform your career with CEH Elite v13 Master certification. Enterprise-grade offensive security training. Limited to 20 professionals.',
+    title: 'CEH Elite V13 – Enterprise Ethical Hacking & Red Team Masterclass',
+    description: 'Transform your career with interview-only CEH Elite V13 training. Enterprise-grade offensive security for senior professionals. Limited to 20 per cohort.',
     type: 'website',
+    images: [
+      {
+        url: 'https://masterclass.essokacybersecuritydiv.com/og-ceh-elite.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'CEH Elite V13 Enterprise Training'
+      }
+    ]
   },
 }
 
@@ -21,8 +37,8 @@ export default function CEHMasterclass() {
   const courseStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'CEH Elite v13 Master Certification',
-    description: 'Comprehensive Certified Ethical Hacker Elite v13 Master training program covering advanced offensive security, penetration testing, VAPT, and enterprise security.',
+    name: 'CEH Elite V13 Enterprise Masterclass',
+    description: 'Interview-only CEH Elite v13 Master training program for senior security professionals covering advanced offensive security, red team operations, penetration testing, and enterprise security.',
     provider: {
       '@type': 'Organization',
       name: 'Essoka Cybersecurity Division',
@@ -39,9 +55,13 @@ export default function CEHMasterclass() {
     },
     hasCourseInstance: {
       '@type': 'CourseInstance',
-      courseMode: 'onsite',
-      courseWorkload: 'PT40H',
-      startDate: '2026-02-15'
+      courseMode: 'blended',
+      courseWorkload: 'PT15H',
+      instructor: {
+        '@type': 'Person',
+        name: 'Dr. Coach Achu Gustave'
+      },
+      startDate: '2026-03-15'
     },
     educationalLevel: 'Advanced',
     audience: {
@@ -49,20 +69,66 @@ export default function CEHMasterclass() {
       educationalRole: 'Professional'
     },
     inLanguage: 'en',
-    availableLanguage: ['en', 'fr']
+    availableLanguage: ['en', 'fr'],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '150'
+    }
+  };
+
+  // FAQ Structured Data
+  const faqStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How is CEH Elite V13 different from standard CEH training?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'CEH Elite V13 focuses on making you client-ready and enterprise-competent with enterprise-grade red team simulations, 1-on-1 mentorship, real penetration test portfolio projects, consulting readiness training, and lifetime alumni community access.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What payment options are available?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We accept full payment ($5,000 USD), payment plans upon approval, and corporate invoicing for team enrollments via wire transfer, credit card, or bank transfer.'
+        }
+      }
+    ]
   };
 
   return (
-    <div className="bg-cyber-darker">
+    <>
+      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseStructuredData) }}
       />
-      <CEHHero />
-      <CEHCountdown targetDate="2026-02-15T00:00:00" />
-      <CEHTarget />
-      <CEHPackage />
-      <RegistrationForm program="CEH Elite v13" />
-    </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
+
+      {/* Navigation */}
+      <CEHNavigation />
+
+      {/* Main Content - Exact order as specified */}
+      <div className="bg-cyber-darker">
+        <CEHHeroV2 />        {/* #hero */}
+        <CEHFit />           {/* #fit */}
+        <CEHOutcomes />      {/* #outcomes */}
+        <CEHElite />         {/* #elite */}
+        <CEHStructure />     {/* #structure */}
+        <CEHInstructor />    {/* #instructor */}
+        <CEHTrust />         {/* #trust */}
+        <CEHCohort />        {/* #cohort */}
+        <CEHApply />         {/* #apply */}
+        <CEHFAQ />           {/* #faq */}
+      </div>
+    </>
   )
 }
