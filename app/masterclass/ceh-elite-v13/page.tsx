@@ -10,6 +10,7 @@ import CEHTrust from '@/components/ceh/v2/CEHTrust'
 import CEHCohort from '@/components/ceh/v2/CEHCohort'
 import CEHApply from '@/components/ceh/v2/CEHApply'
 import CEHFAQ from '@/components/ceh/v2/CEHFAQ'
+import ApplicationFormWrapper from '@/components/ceh/v2/ApplicationFormWrapper'
 
 export const metadata = {
   title: 'CEH Elite V13 – Enterprise Ethical Hacking & Red Team Masterclass (Application Only) | ECSD',
@@ -102,7 +103,7 @@ export default function CEHMasterclass() {
   };
 
   return (
-    <>
+    <div className="min-h-screen">
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -129,6 +130,9 @@ export default function CEHMasterclass() {
         <CEHApply />         {/* #apply */}
         <CEHFAQ />           {/* #faq */}
       </div>
-    </>
+
+      {/* Application Form Modal */}
+      <ApplicationFormWrapper />
+    </div>
   )
 }

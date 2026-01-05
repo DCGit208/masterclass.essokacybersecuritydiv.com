@@ -3,12 +3,9 @@
 import { motion } from 'framer-motion'
 import { FaCalendarAlt, FaUsers, FaClipboardCheck, FaClock } from 'react-icons/fa'
 import CEHCountdown from '../CEHCountdown'
+import { CEH_ELITE_CONFIG } from '@/config/ceh-elite-v13'
 
 const CEHCohort = () => {
-  // TODO: Update these dates
-  const COHORT_START_DATE = "March 15, 2026"
-  const APPLICATION_DEADLINE = "February 28, 2026"
-  const COUNTDOWN_TARGET = "2026-03-15T00:00:00"
 
   return (
     <section id="cohort" className="py-20 bg-gradient-to-b from-cyber-dark to-cyber-darker relative overflow-hidden">
@@ -48,7 +45,7 @@ const CEHCohort = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1 font-rajdhani">Cohort Start Date</h3>
-                <p className="text-2xl text-cyber-gold font-bold">{COHORT_START_DATE}</p>
+                <p className="text-2xl text-cyber-gold font-bold">{CEH_ELITE_CONFIG.cohortStartDate}</p>
               </div>
             </div>
 
@@ -58,7 +55,7 @@ const CEHCohort = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1 font-rajdhani">Application Deadline</h3>
-                <p className="text-2xl text-cyber-red font-bold">{APPLICATION_DEADLINE}</p>
+                <p className="text-2xl text-cyber-red font-bold">{CEH_ELITE_CONFIG.applicationDeadline}</p>
               </div>
             </div>
 
@@ -109,7 +106,7 @@ const CEHCohort = () => {
 
         {/* Countdown */}
         <div className="mb-12">
-          <CEHCountdown targetDate={COUNTDOWN_TARGET} />
+          <CEHCountdown targetDate={CEH_ELITE_CONFIG.countdownTarget} />
         </div>
 
         {/* CTA Block */}

@@ -3,14 +3,9 @@
 import { motion } from 'framer-motion'
 import { FaShieldAlt, FaCheckCircle, FaCalendarAlt, FaUsers } from 'react-icons/fa'
 import Link from 'next/link'
+import { CEH_ELITE_CONFIG } from '@/config/ceh-elite-v13'
 
 const CEHHeroV2 = () => {
-  // TODO: Replace with actual application form URL
-  const APPLICATION_URL = "https://YOUR_APPLICATION_FORM_LINK"
-  // TODO: Replace with actual Calendly booking URL
-  const CALENDLY_URL = "https://YOUR_BOOKING_LINK"
-  // TODO: Replace with actual application deadline date
-  const APPLICATION_DEADLINE = "February 28, 2026"
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-cyber-darker via-cyber-dark to-cyber-darker pt-32 pb-20">
@@ -84,7 +79,7 @@ const CEHHeroV2 = () => {
               <div className="flex items-center space-x-3">
                 <FaCalendarAlt className="text-cyber-red text-2xl" />
                 <p className="text-white">
-                  Applications close on <span className="text-cyber-red font-bold">{APPLICATION_DEADLINE}</span>
+                  Applications close on <span className="text-cyber-red font-bold">{CEH_ELITE_CONFIG.applicationDeadline}</span>
                 </p>
               </div>
             </div>
@@ -92,14 +87,14 @@ const CEHHeroV2 = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <a
-                href={APPLICATION_URL}
+                href={CEH_ELITE_CONFIG.applicationUrl}
                 data-cta="apply"
                 className="inline-flex items-center justify-center bg-cyber-accent text-cyber-darker px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyber-accent/90 transition-all hover:shadow-2xl hover:shadow-cyber-accent/50 transform hover:scale-105"
               >
                 Apply for the Next Cohort →
               </a>
               <a
-                href={CALENDLY_URL}
+                href={CEH_ELITE_CONFIG.bookingUrl}
                 data-cta="book-call"
                 className="inline-flex items-center justify-center border-2 border-cyber-accent text-cyber-accent px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyber-accent/10 transition-all"
               >
