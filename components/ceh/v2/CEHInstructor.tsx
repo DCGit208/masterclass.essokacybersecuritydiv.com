@@ -116,7 +116,7 @@ const CEHInstructor = () => {
                 but can execute with confidence and communicate with authority.&quot;
               </p>
               <p className="text-gray-400 text-sm italic">
-                — {instructor.name}, Founder, Essoka Cybersecurity Division
+                — {instructor.name}, Mentor, Essoka Cybersecurity Division
               </p>
             </div>
           </div>
