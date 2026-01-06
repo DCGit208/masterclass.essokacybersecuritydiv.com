@@ -68,7 +68,7 @@ const CEHNavigation = () => {
                 </a>
               ))}
               <a
-                href="https://YOUR_APPLICATION_FORM_LINK"
+                href="#apply-modal"
                 data-cta="apply"
                 className="ml-4 bg-cyber-accent text-cyber-darker px-6 py-2 rounded-lg font-bold text-sm hover:bg-cyber-accent/90 transition-all"
               >
@@ -111,7 +111,7 @@ const CEHNavigation = () => {
                   </a>
                 ))}
                 <a
-                  href="https://YOUR_APPLICATION_FORM_LINK"
+                  href="#apply-modal"
                   data-cta="apply"
                   className="mx-4 mt-2 bg-cyber-accent text-cyber-darker px-6 py-3 rounded-lg font-bold text-center hover:bg-cyber-accent/90 transition-all"
                 >
@@ -126,7 +126,7 @@ const CEHNavigation = () => {
       {/* Mobile Sticky CTA */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-cyber-darker/95 backdrop-blur-lg border-t border-cyber-accent/20 p-4">
         <a
-          href="https://YOUR_APPLICATION_FORM_LINK"
+          href="#apply-modal"
           data-cta="apply"
           className="block bg-cyber-accent text-cyber-darker px-6 py-4 rounded-xl font-bold text-center hover:bg-cyber-accent/90 transition-all w-full"
         >

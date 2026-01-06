@@ -60,7 +60,7 @@ const CEHApply = () => {
           <div className="text-center mb-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <a
-                href="https://YOUR_APPLICATION_FORM_LINK"
+                href="#apply-modal"
                 data-cta="apply"
                 className="inline-flex items-center justify-center bg-cyber-accent text-cyber-darker px-10 py-5 rounded-xl font-bold text-xl hover:bg-cyber-accent/90 transition-all hover:shadow-2xl hover:shadow-cyber-accent/50 transform hover:scale-105"
               >
@@ -75,7 +75,7 @@ const CEHApply = () => {
 
             <p className="text-gray-400 mb-4">Not ready to apply?</p>
             <a
-              href="https://YOUR_BOOKING_LINK"
+              href="https://calendly.com/bthedugrp/30min"
               data-cta="book-call"
               className="inline-flex items-center justify-center border-2 border-cyber-accent text-cyber-accent px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyber-accent/10 transition-all"
             >
