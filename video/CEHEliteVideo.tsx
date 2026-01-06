@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig } from 'remotion';
+import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig, Audio, Img } from 'remotion';
 
 interface CEHEliteVideoProps {
   instructorName: string;
@@ -35,7 +35,13 @@ export const CEHEliteVideo: React.FC<CEHEliteVideoProps> = ({
   };
 
   return (
-    <AbsoluteFill style={{ backgroundColor: colors.dark }}>
+    <AbsoluteFill style={{ backgroundColor: colors.dark }}>      {/* Background Music - loops throughout entire video */}
+      <Audio
+        src="/audio/epic-background.mp3"
+        volume={0.3}
+        loop
+        startFrom={0}
+      />
       {/* Cyber grid background */}
       <AbsoluteFill
         style={{
@@ -58,13 +64,21 @@ export const CEHEliteVideo: React.FC<CEHEliteVideoProps> = ({
 
       {/* Scene 3: Elite Difference (15-30s) */}
       {frame >= scene2End && frame < scene3End && (
-        <Scene3
-          frame={frame - scene2End}
-          fps={fps}
-          colors={colors}
-          instructorName={instructorName}
-          awardTitle={awardTitle}
-        />
+        <>
+          <Scene3
+            frame={frame - scene2End}
+            fps={fps}
+            colors={colors}
+            instructorName={instructorName}
+            awardTitle={awardTitle}
+          />
+          {/* Voiceover for Scene 3 */}
+          <Audio
+            src="/audio/scene3-elite.mp3"
+            startFrom={(frame - scene2End) / fps}
+            volume={0.8}
+          />
+        </>
       )}
 
       {/* Scene 4: Transformation (30-45s) */}
@@ -309,6 +323,28 @@ const Scene3: React.FC<{
         <br />
         <span style={{ fontSize: 28, color: colors.gold }}>{awardTitle}</span>
       </div>
+
+      {/* Global Instructor Award Certificate */}
+      <AbsoluteFill style={{ justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 40 }}>
+        <div
+          style={{
+            opacity: interpolate(frame, [fps * 10, fps * 12], [0, 1], { extrapolateRight: 'clamp' }),
+            width: 300,
+            height: 400,
+            position: 'relative',
+          }}
+        >
+          <Img
+            src="/Global Instructor award.png"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 0 20px rgba(255, 215, 0, 0.5))',
+            }}
+          />
+        </div>
+      </AbsoluteFill>
     </AbsoluteFill>
   );
 };

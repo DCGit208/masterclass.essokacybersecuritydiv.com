@@ -11,10 +11,13 @@
     "video:render": "remotion render video/Root.tsx CEHEliteV13 public/ceh-elite-hero-video.mp4"
   },
   "dependencies": {
+    "@remotion/media-utils": "^4.0.402",
+    "@runwayml/sdk": "^3.11.0",
     "date-fns": "^3.0.0",
+    "elevenlabs": "^1.59.0",
     "framer-motion": "^10.16.16",
     "next": "^14.0.4",
-    "nodemailer": "^6.9.7",
+    "nodemailer": "^7.0.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.49.2",

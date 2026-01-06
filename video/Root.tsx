@@ -1,5 +1,6 @@
-import { Composition } from 'remotion';
-import { CEHEliteVideo } from './video/CEHEliteVideo';
+import React from 'react';
+import { Composition, registerRoot } from 'remotion';
+import { CEHEliteVideo } from './CEHEliteVideo';
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -22,3 +23,5 @@ export const RemotionRoot: React.FC = () => {
     </>
   );
 };
+
+registerRoot(RemotionRoot);
