@@ -51,6 +51,7 @@ export const CEH_ELITE_CONFIG = {
     title: "Founder & Lead Instructor",
     credentials: "CEH, CHFI, CySA+, Security+",
     photo: "/team/dr-achu-gustave.png",
+    linkedinUrl: "https://www.linkedin.com/in/drcoachachugustave",
     yearsExperience: "15+",
     studentsTrained: "500+",
     projectsDelivered: "50+",

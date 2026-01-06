@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaUserTie, FaAward, FaGraduationCap } from 'react-icons/fa'
+import { FaUserTie, FaAward, FaGraduationCap, FaLinkedin } from 'react-icons/fa'
 import Image from 'next/image'
 import { CEH_ELITE_CONFIG } from '@/config/ceh-elite-v13'
 
@@ -57,9 +57,22 @@ const CEHInstructor = () => {
 
               {/* Instructor Info */}
               <div className="md:col-span-2">
-                <h3 className="text-3xl font-bold text-white mb-2 font-rajdhani">
-                  {instructor.name}
-                </h3>
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-3xl font-bold text-white font-rajdhani">
+                    {instructor.name}
+                  </h3>
+                  {instructor.linkedinUrl && (
+                    <a
+                      href={instructor.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-cyber-accent hover:text-cyber-accent/80 transition-colors"
+                      aria-label="LinkedIn Profile"
+                    >
+                      <FaLinkedin className="text-2xl" />
+                    </a>
+                  )}
+                </div>
                 <p className="text-xl text-cyber-gold mb-4">{instructor.title}</p>
                 <p className="text-gray-300 mb-4">{instructor.credentials}</p>
                 
