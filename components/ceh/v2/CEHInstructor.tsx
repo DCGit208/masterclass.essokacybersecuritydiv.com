@@ -48,8 +48,8 @@ const CEHInstructor = () => {
                     src={instructor.photo}
                     alt={instructor.name}
                     fill
-                    className="object-cover object-top"
-                    style={{ objectPosition: '50% 20%' }}
+                    className="object-cover"
+                    style={{ objectPosition: '50% 10%' }}
                     priority
                   />
                 </div>
