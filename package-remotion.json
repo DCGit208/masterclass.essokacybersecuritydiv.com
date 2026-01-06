@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "remotion:preview": "remotion preview video/Root.tsx",
+    "remotion:render": "remotion render video/Root.tsx CEHEliteV13 public/ceh-elite-hero-video.mp4"
+  }
+}
