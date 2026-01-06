@@ -3,17 +3,10 @@
 import { motion } from 'framer-motion'
 import { FaUserTie, FaAward, FaGraduationCap } from 'react-icons/fa'
 import Image from 'next/image'
+import { CEH_ELITE_CONFIG } from '@/config/ceh-elite-v13'
 
 const CEHInstructor = () => {
-  // TODO: Replace with actual instructor details
-  const instructor = {
-    name: "Dr. Coach Achu Gustave",
-    role: "Lead Instructor & Founder",
-    credentials: "CEH Master, CISSP, CompTIA Security+",
-    experience: "15+ Years",
-    trained: "500+ Professionals",
-    projects: "50+ Enterprise Engagements"
-  }
+  const instructor = CEH_ELITE_CONFIG.instructor
 
   return (
     <section id="instructor" className="py-20 bg-cyber-darker relative overflow-hidden">
@@ -51,10 +44,13 @@ const CEHInstructor = () => {
               {/* Instructor Photo */}
               <div className="flex justify-center">
                 <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-cyber-accent/50">
-                  {/* TODO: Replace with actual instructor photo */}
-                  <div className="w-full h-full bg-cyber-dark flex items-center justify-center">
-                    <FaUserTie className="text-8xl text-cyber-accent/50" />
-                  </div>
+                  <Image
+                    src={instructor.photo}
+                    alt={instructor.name}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
 
@@ -63,21 +59,21 @@ const CEHInstructor = () => {
                 <h3 className="text-3xl font-bold text-white mb-2 font-rajdhani">
                   {instructor.name}
                 </h3>
-                <p className="text-xl text-cyber-gold mb-4">{instructor.role}</p>
+                <p className="text-xl text-cyber-gold mb-4">{instructor.title}</p>
                 <p className="text-gray-300 mb-4">{instructor.credentials}</p>
                 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mt-6">
                   <div className="text-center bg-cyber-darker/80 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-cyber-accent font-rajdhani">{instructor.experience}</div>
+                    <div className="text-2xl font-bold text-cyber-accent font-rajdhani">{instructor.yearsExperience}</div>
                     <div className="text-xs text-gray-400">Experience</div>
                   </div>
                   <div className="text-center bg-cyber-darker/80 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-cyber-gold font-rajdhani">{instructor.trained}</div>
+                    <div className="text-2xl font-bold text-cyber-gold font-rajdhani">{instructor.studentsTrained}</div>
                     <div className="text-xs text-gray-400">Trained</div>
                   </div>
                   <div className="text-center bg-cyber-darker/80 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-primary-400 font-rajdhani">{instructor.projects}</div>
+                    <div className="text-2xl font-bold text-primary-400 font-rajdhani">{instructor.projectsDelivered}</div>
                     <div className="text-xs text-gray-400">Projects</div>
                   </div>
                 </div>
