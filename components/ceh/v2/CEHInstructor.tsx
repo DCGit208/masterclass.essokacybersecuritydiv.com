@@ -94,18 +94,46 @@ const CEHInstructor = () => {
               </div>
             </div>
 
+            {/* Global Instructor Award - MAJOR CREDIBILITY */}
+            {instructor.awardImage && (
+              <div className="mb-8 bg-gradient-to-r from-cyber-gold/10 to-cyber-accent/10 border-2 border-cyber-gold/30 rounded-xl p-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                  <div className="md:col-span-1 flex justify-center">
+                    <div className="relative w-48 h-64">
+                      <Image
+                        src={instructor.awardImage}
+                        alt={instructor.awardTitle}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                  <div className="md:col-span-2">
+                    <div className="flex items-center gap-2 mb-3">
+                      <FaAward className="text-cyber-gold text-3xl" />
+                      <h4 className="text-2xl font-bold text-cyber-gold font-rajdhani">
+                        {instructor.awardTitle}
+                      </h4>
+                    </div>
+                    <p className="text-gray-300 text-lg mb-4">
+                      Recognized globally by EC-Council for excellence in cybersecurity training and student success. 
+                      This is the highest honor awarded to EC-Council instructors worldwide.
+                    </p>
+                    <div className="text-sm text-gray-400">
+                      When learning CEH, you want to learn from someone EC-Council themselves has certified as the best.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Key Achievements */}
             <div className="mb-8">
               <h4 className="text-xl font-bold text-white mb-4 font-rajdhani flex items-center">
-                <FaAward className="text-cyber-gold mr-2" /> Key Achievements
+                <FaAward className="text-cyber-gold mr-2" /> Track Record
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {[
-                  "Led security assessments for major financial institutions",
-                  "Trained corporate security teams across Africa and globally",
-                  "Speaker at international cybersecurity conferences",
-                  "Published researcher in ethical hacking methodologies"
-                ].map((achievement, index) => (
+                {instructor.specialties && instructor.specialties.map((achievement, index) => (
                   <div key={index} className="flex items-start space-x-2">
                     <div className="w-2 h-2 bg-cyber-accent rounded-full mt-2 flex-shrink-0" />
                     <p className="text-gray-300 text-sm">{achievement}</p>
@@ -126,7 +154,7 @@ const CEHInstructor = () => {
                 but can execute with confidence and communicate with authority.&quot;
               </p>
               <p className="text-gray-400 text-sm italic">
-                — {instructor.name}, Mentor, Essoka Cybersecurity Division
+                — {instructor.name}, {instructor.title}
               </p>
             </div>
           </div>

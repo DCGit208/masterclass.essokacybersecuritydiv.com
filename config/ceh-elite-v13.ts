@@ -48,13 +48,20 @@ export const CEH_ELITE_CONFIG = {
   
   instructor: {
     name: "Dr. Coach Achu Gustave",
-    title: "Founder & Lead Instructor",
-    credentials: "CEH, CHFI, CySA+, Security+",
+    title: "EC-Council Global Instructor of the Year 2022",
+    credentials: "AEC-Sr., CSCU, CEH, CHFI, CEI, ISO 27001 PECB Lead Auditor",
     photo: "/team/dr-achu-gustave.png",
     linkedinUrl: "https://www.linkedin.com/in/drcoachachugustave",
+    awardImage: "/Global Instructor award.png",
+    awardTitle: "EC-Council Global Instructor of the Year 2022",
     yearsExperience: "15+",
-    studentsTrained: "500+",
+    studentsTrained: "1000+",
     projectsDelivered: "50+",
+    specialties: [
+      "Mentored and built cybersecurity companies and programs",
+      "Trained government agencies globally",
+      "EC-Council certified instructor"
+    ],
   },
   
   
