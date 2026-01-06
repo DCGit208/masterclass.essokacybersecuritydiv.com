@@ -50,7 +50,7 @@ export const CEH_ELITE_CONFIG = {
     name: "Dr. Coach Achu Gustave",
     title: "Founder & Lead Instructor",
     credentials: "CEH, CHFI, CySA+, Security+",
-    photo: "/team/instructor-placeholder.jpg", // Replace with actual photo path
+    photo: "/team/dr-achu-gustave.png",
     yearsExperience: "15+",
     studentsTrained: "500+",
     projectsDelivered: "50+",
