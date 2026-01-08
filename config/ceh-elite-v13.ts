@@ -82,7 +82,7 @@ export const CEH_ELITE_CONFIG = {
   
   media: {
     /** Video embed URL (YouTube, Vimeo, etc.) - leave empty to show placeholder */
-    heroVideoUrl: "",
+    heroVideoUrl: "/ceh-elite-hero-video.mp4",
     
     /** Open Graph image for social sharing */
     ogImage: "/og-ceh-elite.jpg",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig, Audio, Img } from 'remotion';
+import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig, Audio, Img, staticFile } from 'remotion';
 
 interface CEHEliteVideoProps {
   instructorName: string;
@@ -37,7 +37,7 @@ export const CEHEliteVideo: React.FC<CEHEliteVideoProps> = ({
   return (
     <AbsoluteFill style={{ backgroundColor: colors.dark }}>      {/* Background Music - loops throughout entire video */}
       <Audio
-        src="/audio/epic-background.mp3"
+        src={staticFile('audio/epic-background.mp3')}
         volume={0.3}
         loop
         startFrom={0}
@@ -64,21 +64,13 @@ export const CEHEliteVideo: React.FC<CEHEliteVideoProps> = ({
 
       {/* Scene 3: Elite Difference (15-30s) */}
       {frame >= scene2End && frame < scene3End && (
-        <>
-          <Scene3
-            frame={frame - scene2End}
-            fps={fps}
-            colors={colors}
-            instructorName={instructorName}
-            awardTitle={awardTitle}
-          />
-          {/* Voiceover for Scene 3 */}
-          <Audio
-            src="/audio/scene3-elite.mp3"
-            startFrom={(frame - scene2End) / fps}
-            volume={0.8}
-          />
-        </>
+        <Scene3
+          frame={frame - scene2End}
+          fps={fps}
+          colors={colors}
+          instructorName={instructorName}
+          awardTitle={awardTitle}
+        />
       )}
 
       {/* Scene 4: Transformation (30-45s) */}
@@ -335,7 +327,7 @@ const Scene3: React.FC<{
           }}
         >
           <Img
-            src="/Global Instructor award.png"
+            src={staticFile('Global Instructor award.png')}
             style={{
               width: '100%',
               height: '100%',
