@@ -116,19 +116,33 @@ const CEHHeroV2 = () => {
             className="relative"
           >
             <div className="relative bg-cyber-darker border-2 border-cyber-accent/30 rounded-2xl p-4 shadow-2xl">
-              {/* TODO: Replace with actual video embed */}
-              <div className="aspect-video bg-cyber-dark rounded-xl flex items-center justify-center relative overflow-hidden group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyber-accent/20 to-cyber-gold/20" />
-                <div className="relative z-10 text-center">
-                  <div className="w-20 h-20 bg-cyber-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <svg className="w-10 h-10 text-cyber-darker ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-white font-bold text-lg mb-2">Watch: What Makes CEH Elite V13 Different</p>
-                  <p className="text-gray-400 text-sm">60 seconds</p>
+              {CEH_ELITE_CONFIG.media.heroVideoUrl ? (
+                <div className="aspect-video bg-cyber-dark rounded-xl overflow-hidden relative">
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover"
+                  >
+                    <source src={CEH_ELITE_CONFIG.media.heroVideoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
-              </div>
+              ) : (
+                <div className="aspect-video bg-cyber-dark rounded-xl flex items-center justify-center relative overflow-hidden group cursor-pointer">
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyber-accent/20 to-cyber-gold/20" />
+                  <div className="relative z-10 text-center">
+                    <div className="w-20 h-20 bg-cyber-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                      <svg className="w-10 h-10 text-cyber-darker ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                    <p className="text-white font-bold text-lg mb-2">Watch: What Makes CEH Elite V13 Different</p>
+                    <p className="text-gray-400 text-sm">60 seconds</p>
+                  </div>
+                </div>
+              )}
               <p className="text-gray-400 text-sm text-center mt-4">
                 See why senior professionals choose this over standard CEH training
               </p>
