@@ -2,19 +2,19 @@ import React from 'react';
 import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig, Audio, Img, staticFile } from 'remotion';
 
 interface CEHEliteVideoProps {
-  instructorName: string;
-  awardTitle: string;
-  deadline: string;
-  cohortStart: string;
-  maxSlots: number;
+  instructorName?: string;
+  awardTitle?: string;
+  deadline?: string;
+  cohortStart?: string;
+  maxSlots?: number;
 }
 
 export const CEHEliteVideo: React.FC<CEHEliteVideoProps> = ({
-  instructorName,
-  awardTitle,
-  deadline,
-  cohortStart,
-  maxSlots,
+  instructorName = "Dr. Coach Achu Gustave",
+  awardTitle = "EC-Council Global Instructor of the Year 2022",
+  deadline = "January 25, 2026",
+  cohortStart = "February 10, 2026",
+  maxSlots = 20,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
