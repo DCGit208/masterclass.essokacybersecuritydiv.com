@@ -20,7 +20,7 @@ const CEHCredentials = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-white mb-4">
-            Dual Credentials <span className="text-gradient">You'll Earn</span>
+            Dual Credentials <span className="text-gradient">You&apos;ll Earn</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Technical certification meets strategic business positioning
