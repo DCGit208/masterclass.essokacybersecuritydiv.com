@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaQuoteLeft, FaStar, FaBuilding } from 'react-icons/fa'
+import { FaQuoteLeft, FaStar, FaBuilding, FaAward } from 'react-icons/fa'
 
 const CEHTrust = () => {
   // TODO: Replace with real testimonials when available
