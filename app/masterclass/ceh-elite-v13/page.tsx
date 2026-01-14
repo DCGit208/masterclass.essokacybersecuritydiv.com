@@ -1,6 +1,7 @@
 // New V2 High-Conversion Components
 import CEHNavigation from '@/components/ceh/v2/CEHNavigation'
 import CEHHeroV2 from '@/components/ceh/v2/CEHHeroV2'
+import CEHCredentials from '@/components/ceh/v2/CEHCredentials'
 import CEHFit from '@/components/ceh/v2/CEHFit'
 import CEHOutcomes from '@/components/ceh/v2/CEHOutcomes'
 import CEHElite from '@/components/ceh/v2/CEHElite'
@@ -120,6 +121,7 @@ export default function CEHMasterclass() {
       {/* Main Content - Exact order as specified */}
       <div className="bg-cyber-darker">
         <CEHHeroV2 />        {/* #hero */}
+        <CEHCredentials />   {/* #credentials - NEW: Dual credentials showcase */}
         <CEHFit />           {/* #fit */}
         <CEHOutcomes />      {/* #outcomes */}
         <CEHElite />         {/* #elite */}
