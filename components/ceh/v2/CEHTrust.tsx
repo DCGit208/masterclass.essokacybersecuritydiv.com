@@ -8,35 +8,35 @@ const CEHTrust = () => {
   const testimonials = [
     {
       name: "Sample Testimonial 1",
-      role: "Security Consultant",
-      company: "Fortune 500 Financial Services",
-      quote: "This program transformed my consulting practice. Within 3 months I landed a $120K contract I wouldn't have had the confidence to pursue before.",
+      role: "Security Consulting Firm Owner",
+      company: "Fortune 500 Financial Services Clients",
+      quote: "This mentorship transformed my business model. I repositioned from $50/hr contractor to $15K/month retainer advisory. Within 6 months, landed 3 enterprise clients at premium rates.",
       rating: 5,
       note: "(Placeholder - replace with real testimonial)"
     },
     {
       name: "Sample Testimonial 2",
-      role: "SOC Manager",
-      company: "Global Technology Company",
-      quote: "The red team scenarios were invaluable. I went from theory to hands-on competence, and my team now respects my technical authority.",
+      role: "VP of Security Services",
+      company: "Mid-Market Technology Company",
+      quote: "The market intelligence alone was worth 10x the investment. I now understand what enterprises actually pay for security services and how to position our offerings. Revenue up 240%.",
       rating: 5,
       note: "(Placeholder - replace with real testimonial)"
     },
     {
       name: "Sample Testimonial 3",
-      role: "Security Engineer",
-      company: "Enterprise Healthcare",
-      quote: "Best investment in my career. The mentorship alone was worth the price. I'm now leading penetration tests for our entire organization.",
+      role: "Independent Security Advisor",
+      company: "Multiple Enterprise Clients",
+      quote: "Best ROI of any business investment. Went from job-hunting to launching my advisory practice with 5 clients in first quarter. Dr. Achu showed me the economics, not just the technical skills.",
       rating: 5,
       note: "(Placeholder - replace with real testimonial)"
     }
   ]
 
   const stats = [
-    { number: "500+", label: "Professionals Trained" },
-    { number: "95%", label: "Exam Pass Rate" },
-    { number: "85%", label: "Career Advancement Within 12 Months" },
-    { number: "15+", label: "Years Training Excellence" }
+    { number: "1000+", label: "Professionals Trained" },
+    { number: "95%", label: "Certification Success Rate" },
+    { number: "85%", label: "Business Launch/Advancement Within 12 Months" },
+    { number: "15+", label: "Years Market Intelligence" }
   ]
 
   return (

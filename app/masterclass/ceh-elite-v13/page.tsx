@@ -13,22 +13,22 @@ import CEHFAQ from '@/components/ceh/v2/CEHFAQ'
 import ApplicationFormWrapper from '@/components/ceh/v2/ApplicationFormWrapper'
 
 export const metadata = {
-  title: 'CEH Elite V13 – Enterprise Ethical Hacking & Red Team Masterclass (Application Only) | ECSD',
-  description: 'High-ticket CEH Elite V13 masterclass for senior cybersecurity professionals. Enterprise labs, red team simulations, mentorship, interview-only enrollment. Apply now.',
-  keywords: 'CEH Elite V13, enterprise ethical hacking, red team training, senior security professional, CEH Master certification, penetration testing masterclass, cybersecurity consulting, offensive security training, application only CEH, interview-only enrollment',
+  title: 'Elite Cybersecurity Investor – Offensive Security Market Mentorship | CEH Elite V13 | ECSD',
+  description: 'Elite mentorship for executives, business owners, and strategic decision-makers investing in offensive security markets. Market intelligence, deal structures, and business positioning. CEH Elite V13 certified. Interview-only enrollment.',
+  keywords: 'cybersecurity investor, offensive security business, security consulting practice, CEH Elite V13, enterprise security advisory, security market intelligence, penetration testing business, security services revenue, CISO advisory, offensive security economics, Dr. Coach Achu Gustave, EC-Council ATC',
   alternates: {
     canonical: '/masterclass/ceh-elite-v13',
   },
   openGraph: {
-    title: 'CEH Elite V13 – Enterprise Ethical Hacking & Red Team Masterclass',
-    description: 'Transform your career with interview-only CEH Elite V13 training. Enterprise-grade offensive security for senior professionals. Limited to 20 per cohort.',
+    title: 'Elite Cybersecurity Investor – Offensive Security Market Mentorship',
+    description: 'Transform from technical specialist to strategic investor. Elite mentorship on offensive security economics, deal structures, and business positioning. Limited to 20 business leaders per cohort.',
     type: 'website',
     images: [
       {
         url: 'https://masterclass.essokacybersecuritydiv.com/og-ceh-elite.jpg',
         width: 1200,
         height: 630,
-        alt: 'CEH Elite V13 Enterprise Training'
+        alt: 'Elite Cybersecurity Investor - Offensive Security Market Mentorship'
       }
     ]
   },

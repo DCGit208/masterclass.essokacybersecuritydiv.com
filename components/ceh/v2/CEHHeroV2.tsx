@@ -45,17 +45,17 @@ const CEHHeroV2 = () => {
 
             {/* Exact Positioning Headline */}
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani mb-6 leading-tight">
-              <span className="text-cyber-accent">CEH Elite V13</span>
+              <span className="text-cyber-accent">Elite Cybersecurity Investor</span>
               <br />
-              <span className="text-white">Enterprise-Grade</span>
+              <span className="text-white">Offensive Security</span>
               <br />
-              <span className="text-gradient">Ethical Hacking & Red Team</span>
+              <span className="text-gradient">Market Mentorship</span>
               <br />
-              <span className="text-white">Masterclass</span>
+              <span className="text-white">CEH Elite V13 Certified</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 font-medium">
-              For Senior Security Professionals, Consultants & Team Leads
+              For Executives, Business Owners & Strategic Decision-Makers Investing in Offensive Security Markets
             </p>
 
             {/* Outcome Bullets */}
@@ -63,19 +63,19 @@ const CEHHeroV2 = () => {
               <div className="flex items-start space-x-3">
                 <FaCheckCircle className="text-cyber-accent text-xl mt-1 flex-shrink-0" />
                 <p className="text-gray-200 text-lg">
-                  <strong className="text-white">Authority Positioning:</strong> Command C-suite respect and lead enterprise security initiatives
+                  <strong className="text-white">Market Intelligence:</strong> Understand offensive security economics, deal structures, and revenue models
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <FaCheckCircle className="text-cyber-accent text-xl mt-1 flex-shrink-0" />
                 <p className="text-gray-200 text-lg">
-                  <strong className="text-white">Enterprise Readiness:</strong> Deploy real red team tactics used by Fortune 500 security teams
+                  <strong className="text-white">Strategic Positioning:</strong> Build or invest in high-value security services that enterprises pay premium rates for
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <FaCheckCircle className="text-cyber-accent text-xl mt-1 flex-shrink-0" />
                 <p className="text-gray-200 text-lg">
-                  <strong className="text-white">Career Leverage:</strong> Break into $120K–$250K+ security leadership roles
+                  <strong className="text-white">Investment Returns:</strong> Launch consulting practices, security firms, or advisory services with 6-7 figure potential
                 </p>
               </div>
             </div>
@@ -84,7 +84,7 @@ const CEHHeroV2 = () => {
             <div className="bg-cyber-darker/80 border-l-4 border-cyber-gold rounded-r-lg p-6 mb-8">
               <div className="flex items-center space-x-3 mb-3">
                 <FaUsers className="text-cyber-gold text-2xl" />
-                <p className="text-cyber-gold font-bold text-lg">Limited Cohort • Maximum 20 Professionals</p>
+                <p className="text-cyber-gold font-bold text-lg">Limited Cohort • Maximum 20 Business Leaders</p>
               </div>
               <div className="flex items-center space-x-3">
                 <FaCalendarAlt className="text-cyber-red text-2xl" />
@@ -114,7 +114,7 @@ const CEHHeroV2 = () => {
 
             {/* Micro Trust */}
             <p className="text-gray-400 text-sm">
-              <span className="text-cyber-gold font-semibold">EC-Council ATC (EATCS2208)</span> | Certified EC-Council Instructor (CEI) | Interview-Only Enrollment
+              <span className="text-cyber-gold font-semibold">EC-Council ATC (EATCS2208)</span> | Certified EC-Council Instructor (CEI) | For Business Leaders Investing in Offensive Security
             </p>
           </motion.div>
 

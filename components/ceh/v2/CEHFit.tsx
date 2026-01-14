@@ -6,23 +6,23 @@ import Link from 'next/link'
 
 const CEHFit = () => {
   const forYou = [
-    "Senior security engineers with 3+ years experience",
-    "Security consultants seeking enterprise credibility",
-    "IT professionals transitioning to offensive security",
-    "Team leads preparing for CISO/security leadership roles",
-    "SOC analysts ready to move into red team operations",
-    "Network admins wanting to think like attackers",
-    "Career switchers with solid IT background and commitment"
+    "Business owners building or scaling offensive security services",
+    "Executives investing in enterprise security capabilities",
+    "Strategic consultants advising on security investments",
+    "Entrepreneurs launching cybersecurity ventures or consulting practices",
+    "C-suite leaders needing market intelligence on offensive security economics",
+    "Investors evaluating security service opportunities and deal structures",
+    "Directors positioning for CISO or security business leadership roles"
   ]
 
   const notForYou = [
-    "Complete beginners with no IT/security background",
-    "Looking for quick weekend certificate courses",
-    "Expecting passive learning without hands-on commitment",
-    "Unwilling to invest time in labs and practice",
-    "Just want exam dumps or shortcuts",
-    "Not ready for enterprise-level training intensity",
-    "Seeking discounted or budget certification options"
+    "Looking for basic technical certification without business application",
+    "Expecting passive learning without strategic investment thinking",
+    "Seeking a traditional employee career path vs. business leadership",
+    "Unwilling to commit to understanding the cybersecurity business landscape",
+    "Just want exam prep without market intelligence and business strategy",
+    "Not ready to invest $5,000 in building strategic market positioning",
+    "Seeking budget training vs. elite business mentorship"
   ]
 
   return (

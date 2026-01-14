@@ -4,36 +4,36 @@ import { motion } from 'framer-motion'
 import { FaBriefcase, FaChartLine, FaDollarSign, FaRocket } from 'react-icons/fa'
 
 const CEHOutcomes = () => {
-  const jobRoles = [
-    "Red Team Operator / Penetration Tester",
-    "Security Consultant / Advisory Lead",
-    "SOC Manager / Security Operations Lead",
-    "Application Security Engineer",
-    "Vulnerability Assessment Specialist",
-    "Threat Intelligence Analyst",
-    "Security Architect / Principal Engineer"
+  const businessOpportunities = [
+    "Security Advisory & Consulting Services (Retainer-based)",
+    "Offensive Security Practice Lead / Founder",
+    "Strategic Security Advisor to C-suite/Boards",
+    "Enterprise Penetration Testing Services Provider",
+    "Security Due Diligence for M&A/Investment Deals",
+    "Compliance & Risk Advisory (DoD, HIPAA, PCI-DSS)",
+    "Incident Response & Breach Investigation Services"
   ]
 
   const valueOutcomes = [
     {
       icon: <FaBriefcase className="text-4xl text-cyber-gold" />,
-      title: "Authority & Positioning",
-      description: "Command respect in C-suite conversations and security budget discussions"
+      title: "Market Intelligence",
+      description: "Understand offensive security economics, deal structures, pricing models, and what enterprises actually pay premium for"
     },
     {
       icon: <FaChartLine className="text-4xl text-cyber-accent" />,
-      title: "High-Value Contracts",
-      description: "Win $50K–$250K+ consulting contracts with enterprise-ready skillset"
+      title: "Business Positioning",
+      description: "Position security services for $150K–$500K+ annual contracts with strategic advisory vs. hourly technical work"
     },
     {
       icon: <FaRocket className="text-4xl text-primary-400" />,
-      title: "Promotion Readiness",
-      description: "Move from engineer to lead, manager, or CISO track with proven competence"
+      title: "Practice Launch Readiness",
+      description: "Build or scale consulting practice, advisory firm, or security services business with proven market demand"
     },
     {
       icon: <FaDollarSign className="text-4xl text-cyber-gold" />,
-      title: "Portfolio Credibility",
-      description: "Build a defensible case study portfolio for client pitches and interviews"
+      title: "Investment Portfolio",
+      description: "Develop capability to evaluate, invest in, or partner with offensive security ventures and service providers"
     }
   ]
 
@@ -52,14 +52,14 @@ const CEHOutcomes = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-white mb-4">
-            Career & Income <span className="text-gradient">Outcomes</span>
+            Business & Investment <span className="text-gradient">Opportunities</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            This isn&apos;t just a certification—it&apos;s a career catalyst
+            This isn&apos;t just certification—it&apos;s strategic market positioning and business intelligence
           </p>
         </motion.div>
 
-        {/* Job Roles Unlocked */}
+        {/* Business Opportunities Unlocked */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,10 +68,10 @@ const CEHOutcomes = () => {
           className="bg-cyber-darker/80 border-2 border-cyber-accent/30 rounded-2xl p-8 mb-12"
         >
           <h3 className="text-2xl font-bold text-white mb-6 font-rajdhani text-center">
-            🎯 Job Roles Unlocked
+            💼 Business Opportunities Unlocked
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {jobRoles.map((role, index) => (
+            {businessOpportunities.map((role, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
