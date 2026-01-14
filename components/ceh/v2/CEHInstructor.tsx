@@ -49,7 +49,7 @@ const CEHInstructor = () => {
                     alt={instructor.name}
                     fill
                     className="object-cover"
-                    style={{ objectPosition: '50% 30%' }}
+                    style={{ objectPosition: '50% 15%' }}
                     priority
                   />
                 </div>
