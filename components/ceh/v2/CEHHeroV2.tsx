@@ -23,15 +23,25 @@ const CEHHeroV2 = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Authority Badge */}
-            <motion.div 
-              className="inline-flex items-center space-x-2 bg-cyber-red/20 border border-cyber-red/40 rounded-full px-6 py-2 mb-6"
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <FaShieldAlt className="text-cyber-gold" />
-              <span className="text-cyber-gold font-bold text-sm uppercase tracking-wide">Interview-Only Enrollment</span>
-            </motion.div>
+            {/* Authority Badges */}
+            <div className="flex flex-wrap gap-3 mb-6">
+              <motion.div 
+                className="inline-flex items-center space-x-2 bg-cyber-gold/20 border-2 border-cyber-gold rounded-full px-5 py-2"
+                animate={{ scale: [1, 1.02, 1] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              >
+                <FaShieldAlt className="text-cyber-gold" />
+                <span className="text-cyber-gold font-bold text-xs uppercase tracking-wide">EC-Council Accredited Training Center</span>
+              </motion.div>
+              <motion.div 
+                className="inline-flex items-center space-x-2 bg-cyber-red/20 border border-cyber-red/40 rounded-full px-5 py-2"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <FaShieldAlt className="text-cyber-accent" />
+                <span className="text-white font-bold text-xs uppercase tracking-wide">Interview-Only</span>
+              </motion.div>
+            </div>
 
             {/* Exact Positioning Headline */}
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani mb-6 leading-tight">
@@ -104,7 +114,7 @@ const CEHHeroV2 = () => {
 
             {/* Micro Trust */}
             <p className="text-gray-400 text-sm">
-              Built for professionals. Interview-only enrollment.
+              <span className="text-cyber-gold font-semibold">EC-Council ATC (EATCS2208)</span> | Certified EC-Council Instructor (CEI) | Interview-Only Enrollment
             </p>
           </motion.div>
 

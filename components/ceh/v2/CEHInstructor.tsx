@@ -73,7 +73,11 @@ const CEHInstructor = () => {
                     </a>
                   )}
                 </div>
-                <p className="text-xl text-cyber-gold mb-4">{instructor.title}</p>
+                <div className="inline-flex items-center bg-cyber-gold/20 border border-cyber-gold rounded-full px-4 py-1 mb-3">
+                  <FaAward className="text-cyber-gold mr-2" />
+                  <span className="text-cyber-gold font-bold text-sm">Certified EC-Council Instructor (CEI)</span>
+                </div>
+                <p className="text-xl text-cyber-accent mb-3">{instructor.title}</p>
                 <p className="text-gray-300 mb-4">{instructor.credentials}</p>
                 
                 {/* Stats */}

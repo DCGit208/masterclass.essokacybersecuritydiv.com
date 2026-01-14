@@ -49,7 +49,8 @@ export const CEH_ELITE_CONFIG = {
   instructor: {
     name: "Dr. Coach Achu Gustave",
     title: "EC-Council Global Instructor of the Year 2022",
-    credentials: "AEC-Sr., CSCU, CEH, CHFI, CEI, ISO 27001 PECB Lead Auditor",
+    credentials: "Certified EC-Council Instructor (CEI) | AEC-Sr. | CHFI | ISO 27001 Lead Auditor",
+    ceiCredential: "CEI (Certified EC-Council Instructor)",
     photo: "/team/dr-achu-gustave.png",
     linkedinUrl: "https://www.linkedin.com/in/drcoachachugustave",
     awardImage: "/Global Instructor award.png",
@@ -58,10 +59,31 @@ export const CEH_ELITE_CONFIG = {
     studentsTrained: "1000+",
     projectsDelivered: "50+",
     specialties: [
-      "Mentored and built cybersecurity companies and programs",
-      "Trained government agencies globally",
-      "EC-Council certified instructor"
+      "Official EC-Council Certified Instructor (CEI)",
+      "EC-Council Global Instructor of the Year 2022",
+      "Trained government agencies and enterprises globally",
+      "Built and mentored multiple cybersecurity programs"
     ],
+  },
+  
+  
+  // ============================================
+  // 🏆 EC-Council Accreditation
+  // ============================================
+  
+  accreditation: {
+    isOfficialATC: true,
+    atcCertId: "EATCS2208",
+    atcName: "Essoka Cybersecurity Division",
+    issueDate: "June 09, 2016",
+    expiryDate: "June 30, 2026",
+    certificateImage: "/ec-council-atc-certificate.png",
+    benefits: [
+      "Official EC-Council Courseware & Materials",
+      "Authorized Exam Voucher Distribution",
+      "DoD 8140/8570 Compliance Training",
+      "Direct EC-Council Support & Updates"
+    ]
   },
   
   

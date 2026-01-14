@@ -82,23 +82,46 @@ const CEHTrust = () => {
           ))}
         </div>
 
-        {/* Alignment Statement */}
+        {/* EC-Council Accredited Training Center - MAJOR CREDIBILITY */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-cyber-darker/80 border-2 border-cyber-gold/30 rounded-2xl p-8 mb-16 text-center"
+          className="bg-gradient-to-r from-cyber-gold/20 to-cyber-accent/20 border-2 border-cyber-gold rounded-2xl p-8 mb-16"
         >
-          <h3 className="text-2xl font-bold text-white mb-4 font-rajdhani">
-            Aligned with CEH v13 Objectives
-          </h3>
-          <p className="text-gray-300 max-w-3xl mx-auto mb-4">
-            This program covers all EC-Council CEH v13 domains and prepares you for both knowledge and practical exams. 
-            While we are not an official EC-Council training center, our curriculum is meticulously aligned with certification requirements.
-          </p>
-          <p className="text-sm text-gray-400">
-            EC-Council and CEH are registered trademarks of EC-Council. This program is independently operated by Essoka Cybersecurity Division.
+          <div className="text-center mb-6">
+            <div className="inline-flex items-center justify-center bg-cyber-gold/20 border-2 border-cyber-gold rounded-full px-6 py-3 mb-4">
+              <FaAward className="text-cyber-gold text-3xl mr-3" />
+              <span className="text-cyber-gold font-bold text-lg uppercase tracking-wide">Official EC-Council Accredited Training Center</span>
+            </div>
+            <p className="text-2xl font-bold text-white mb-2 font-rajdhani">Cert ID: EATCS2208</p>
+            <p className="text-gray-300 text-sm">Accredited since 2016 | Valid through June 2026</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="bg-cyber-darker/60 rounded-xl p-6">
+              <h4 className="text-lg font-bold text-cyber-accent mb-3 font-rajdhani">What This Means for You</h4>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li className="flex items-start"><span className="text-cyber-accent mr-2">✓</span> Official EC-Council courseware & materials</li>
+                <li className="flex items-start"><span className="text-cyber-accent mr-2">✓</span> Authorized certification exam vouchers</li>
+                <li className="flex items-start"><span className="text-cyber-accent mr-2">✓</span> DoD 8140/8570 compliant training</li>
+                <li className="flex items-start"><span className="text-cyber-accent mr-2">✓</span> Direct EC-Council support & updates</li>
+              </ul>
+            </div>
+            <div className="bg-cyber-darker/60 rounded-xl p-6">
+              <h4 className="text-lg font-bold text-cyber-gold mb-3 font-rajdhani">Your Instructor</h4>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li className="flex items-start"><span className="text-cyber-gold mr-2">★</span> Certified EC-Council Instructor (CEI)</li>
+                <li className="flex items-start"><span className="text-cyber-gold mr-2">★</span> Global Instructor of the Year 2022</li>
+                <li className="flex items-start"><span className="text-cyber-gold mr-2">★</span> 15+ years training excellence</li>
+                <li className="flex items-start"><span className="text-cyber-gold mr-2">★</span> 1000+ professionals trained</li>
+              </ul>
+            </div>
+          </div>
+          
+          <p className="text-center text-gray-400 text-xs mt-6">
+            EC-Council and CEH are registered trademarks of EC-Council. Essoka Cybersecurity Division is an officially authorized training partner.
           </p>
         </motion.div>
 
