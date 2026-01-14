@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     siteName: 'ECSD Masterclass',
     title: 'ECSD Masterclass - Elite Cybersecurity Training | CEH Master Certification',
     description: 'World-class CEH Elite v13 Master certification and cybersecurity training programs. Transform your team with market-leading offensive security expertise.',
+    images: [
+      {
+        url: 'https://masterclass.essokacybersecuritydiv.com/team/dr-achu-gustave.png',
+        width: 1200,
+        height: 630,
+        alt: 'Dr. Coach Achu Gustave - EC-Council Certified Instructor'
+      }
+    ]
   },
   robots: {
     index: true,
