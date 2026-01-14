@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     description: 'World-class CEH Elite v13 Master certification and cybersecurity training programs. Transform your team with market-leading offensive security expertise.',
     images: [
       {
-        url: 'https://masterclass.essokacybersecuritydiv.com/team/dr-achu-gustave.png',
+        url: 'https://masterclass.essokacybersecuritydiv.com/og-ceh-elite.jpg',
         width: 1200,
         height: 630,
-        alt: 'Dr. Coach Achu Gustave - EC-Council Certified Instructor'
+        alt: 'Elite Cybersecurity Investor - Offensive Security Market Mentorship'
       }
     ]
   },
