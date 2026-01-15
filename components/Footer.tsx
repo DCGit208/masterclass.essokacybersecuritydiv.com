@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaLinkedin, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt, FaShieldAlt, FaWhatsapp } from 'react-icons/fa'
 
 const Footer = () => {
@@ -84,8 +85,41 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Accreditation Section */}
+        <div className="border-t border-cyber-accent/20 mt-8 pt-8 mb-8">
+          <div className="text-center mb-6">
+            <h4 className="text-white font-bold text-lg font-rajdhani mb-4">Official EC-Council Accredited Training Center</h4>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              {/* ATC Badge */}
+              <div className="text-center">
+                <Image src="/atc-logo.png" alt="EC-Council ATC Logo" width={80} height={80} className="mx-auto mb-2" />
+                <p className="text-gray-300 text-xs font-semibold">Cert ID: EATCS2208</p>
+                <p className="text-gray-400 text-xs">Valid through June 30, 2026</p>
+              </div>
+              
+              {/* Divider */}
+              <div className="hidden sm:block w-px h-24 bg-cyber-accent/20" />
+              
+              {/* Instructor Credentials */}
+              <div className="text-center">
+                <p className="text-cyber-gold font-bold text-sm mb-1">Certified EC-Council Instructor (CEI)</p>
+                <p className="text-white font-semibold mb-2">Dr. Coach Achu Gustave</p>
+                <p className="text-gray-400 text-xs mb-1">Global Instructor of the Year 2022</p>
+                <p className="text-gray-400 text-xs">ISO/IEC 27001 Lead Auditor | CHFI Certified</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Trust Statement */}
+          <div className="text-center bg-cyber-dark/50 border border-cyber-accent/20 rounded-lg p-4">
+            <p className="text-gray-300 text-sm">
+              <span className="text-cyber-accent font-bold">Enterprise-Grade Training</span> — Essoka Cybersecurity Division is an official EC-Council Accredited Training Center delivering world-class CEH Elite V13 certification, penetration testing training, and offensive security mentorship for business leaders and enterprises.
+            </p>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="border-t border-cyber-accent/20 mt-8 pt-8 text-center">
+        <div className="border-t border-cyber-accent/20 pt-8 text-center">
           <p className="text-gray-400 text-sm">
             © {currentYear} Essoka Cybersecurity Division. All rights reserved. | BTH Education Group - ICD
           </p>

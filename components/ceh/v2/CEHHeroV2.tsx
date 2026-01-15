@@ -112,9 +112,19 @@ const CEHHeroV2 = () => {
               </a>
             </div>
 
+            {/* Explicit Accreditation Trust */}
+            <div className="bg-cyber-dark/80 border border-cyber-gold/40 rounded-lg p-4 mb-4">
+              <p className="text-gray-200 text-sm mb-2">
+                ✓ <span className="text-cyber-gold font-semibold">Official EC-Council Accredited Training Center (EATCS2208)</span>
+              </p>
+              <p className="text-gray-200 text-sm">
+                ✓ <span className="text-cyber-gold font-semibold">Certified EC-Council Instructor (CEI)</span> • Dr. Coach Achu Gustave
+              </p>
+            </div>
+
             {/* Micro Trust */}
-            <p className="text-gray-400 text-sm">
-              <span className="text-cyber-gold font-semibold">EC-Council ATC (EATCS2208)</span> | Certified EC-Council Instructor (CEI) | For Business Leaders Investing in Offensive Security
+            <p className="text-gray-400 text-xs">
+              Valid through June 30, 2026 | ISO/IEC 27001 Lead Auditor | 15+ Years Cybersecurity Experience
             </p>
           </motion.div>
 
