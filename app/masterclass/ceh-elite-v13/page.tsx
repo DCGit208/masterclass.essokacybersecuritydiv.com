@@ -1,4 +1,5 @@
 // New V2 High-Conversion Components
+import { Suspense } from 'react'
 import CEHNavigation from '@/components/ceh/v2/CEHNavigation'
 import CEHHeroV2 from '@/components/ceh/v2/CEHHeroV2'
 import CEHCredentials from '@/components/ceh/v2/CEHCredentials'
@@ -134,7 +135,9 @@ export default function CEHMasterclass() {
       </div>
 
       {/* Application Form Modal */}
-      <ApplicationFormWrapper />
+      <Suspense fallback={null}>
+        <ApplicationFormWrapper />
+      </Suspense>
     </div>
   )
 }

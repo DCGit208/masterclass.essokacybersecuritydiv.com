@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import CEHApplicationForm from './CEHApplicationForm'
 
-export default function ApplicationFormWrapper() {
+function ApplicationFormContent() {
   const [showForm, setShowForm] = useState(false)
   const searchParams = useSearchParams()
   const referralCode = searchParams.get('ref') || undefined
@@ -27,3 +27,5 @@ export default function ApplicationFormWrapper() {
 
   return <CEHApplicationForm onClose={() => setShowForm(false)} referralCode={referralCode} />
 }
+
+export default ApplicationFormContent
