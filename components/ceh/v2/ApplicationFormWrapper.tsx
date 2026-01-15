@@ -1,10 +1,13 @@
 "use client"
 
 import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import CEHApplicationForm from './CEHApplicationForm'
 
 export default function ApplicationFormWrapper() {
   const [showForm, setShowForm] = useState(false)
+  const searchParams = useSearchParams()
+  const referralCode = searchParams.get('ref') || undefined
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -22,5 +25,5 @@ export default function ApplicationFormWrapper() {
 
   if (!showForm) return null
 
-  return <CEHApplicationForm onClose={() => setShowForm(false)} />
+  return <CEHApplicationForm onClose={() => setShowForm(false)} referralCode={referralCode} />
 }

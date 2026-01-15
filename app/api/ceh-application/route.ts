@@ -22,6 +22,7 @@ PERSONAL INFORMATION:
 - Email: ${data.email}
 - Phone: ${data.phone}
 - LinkedIn: ${data.linkedinUrl || "Not provided"}
+- Referral Code: ${data.referralCode || "None"}
 
 PROFESSIONAL BACKGROUND:
 - Current Role: ${data.currentRole}

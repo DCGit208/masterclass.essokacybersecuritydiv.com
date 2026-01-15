@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaUser, FaBriefcase, FaEnvelope, FaPhone, FaGraduationCap, FaDollarSign, FaCheckCircle, FaTimes, FaSpinner } from "react-icons/fa"
 
@@ -10,9 +10,24 @@ interface FormData {
   email: string
   phone: string
   linkedinUrl: string
+  referralCode?: string
   
   // Step 2: Professional Background
   currentRole: string
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Referral Code (if any)
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.referralCode || ""}
+                    onChange={(e) => updateField("referralCode", e.target.value)}
+                    className="w-full px-4 py-3 bg-[#0a0e27] border border-[#00f0ff]/30 rounded-lg text-white focus:outline-none focus:border-[#00f0ff]"
+                    placeholder="e.g., CABREL"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">If you received a partner link, the code is pre-filled.</p>
+                </div>
   company: string
   yearsExperience: string
   currentSalary: string
@@ -31,9 +46,10 @@ interface FormData {
 
 interface ApplicationFormProps {
   onClose: () => void
+  referralCode?: string
 }
 
-export default function CEHApplicationForm({ onClose }: ApplicationFormProps) {
+export default function CEHApplicationForm({ onClose, referralCode }: ApplicationFormProps) {
   const [step, setStep] = useState(1)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
@@ -44,6 +60,7 @@ export default function CEHApplicationForm({ onClose }: ApplicationFormProps) {
     email: "",
     phone: "",
     linkedinUrl: "",
+    referralCode: referralCode || "",
     currentRole: "",
     company: "",
     yearsExperience: "",
@@ -58,6 +75,12 @@ export default function CEHApplicationForm({ onClose }: ApplicationFormProps) {
   })
 
   const totalSteps = 4
+
+  useEffect(() => {
+    if (referralCode) {
+      setFormData((prev) => ({ ...prev, referralCode }))
+    }
+  }, [referralCode])
 
   const validateStep = (currentStep: number): boolean => {
     const newErrors: Partial<FormData> = {}

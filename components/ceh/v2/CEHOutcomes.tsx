@@ -11,7 +11,9 @@ const CEHOutcomes = () => {
     "Enterprise Penetration Testing Services Provider",
     "Security Due Diligence for M&A/Investment Deals",
     "Compliance & Risk Advisory (DoD, HIPAA, PCI-DSS)",
-    "Incident Response & Breach Investigation Services"
+    "Incident Response & Breach Investigation Services",
+    "Board & Investment Committee Advisor (Cyber)",
+    "Security Product/Service Investment Diligence"
   ]
 
   const valueOutcomes = [
@@ -23,7 +25,7 @@ const CEHOutcomes = () => {
     {
       icon: <FaChartLine className="text-4xl text-cyber-accent" />,
       title: "Business Positioning",
-      description: "Position security services for $150K–$500K+ annual contracts with strategic advisory vs. hourly technical work"
+      description: "Position security services for $150K–$500K+ contracts with strategic advisory vs. hourly technical work"
     },
     {
       icon: <FaRocket className="text-4xl text-primary-400" />,
@@ -129,16 +131,16 @@ const CEHOutcomes = () => {
               <p className="text-gray-300">One-Time Investment</p>
             </div>
             <div>
-              <div className="text-5xl font-bold text-cyber-accent mb-2 font-rajdhani">8-12</div>
-              <p className="text-gray-300">Weeks Commitment</p>
+              <div className="text-5xl font-bold text-cyber-accent mb-2 font-rajdhani">12</div>
+              <p className="text-gray-300">Weeks to Market Readiness</p>
             </div>
             <div>
-              <div className="text-5xl font-bold text-white mb-2 font-rajdhani">$120K+</div>
-              <p className="text-gray-300">Average Role Salary</p>
+              <div className="text-5xl font-bold text-white mb-2 font-rajdhani">$150K–$500K</div>
+              <p className="text-gray-300">Typical Contract Value</p>
             </div>
           </div>
           <p className="text-xl text-gray-200 mt-8 max-w-3xl mx-auto">
-            One consulting contract or promotion pays for this 10-20x over. 
+            One advisory retainer or security due diligence project pays for this 10-20x over. 
             The question isn&apos;t cost—it&apos;s <span className="text-cyber-gold font-bold">opportunity cost of waiting</span>.
           </p>
         </motion.div>
