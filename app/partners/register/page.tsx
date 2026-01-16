@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from 'react'
+import { API_ENDPOINTS } from '@/config/firebase'
 
 const RegisterPartner = () => {
   const [formState, setFormState] = useState({
@@ -25,7 +26,7 @@ const RegisterPartner = () => {
     setIsSubmitting(true)
 
     try {
-      const res = await fetch('/api/partners/register', {
+      const res = await fetch(API_ENDPOINTS.partnerRegister, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formState),

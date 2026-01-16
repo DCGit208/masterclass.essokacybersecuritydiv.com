@@ -1,0 +1,16 @@
+{
+  "name": "masterclass-firebase-functions",
+  "version": "1.0.0",
+  "description": "Firebase Functions for CEH Elite V13 Masterclass APIs",
+  "main": "index.js",
+  "engines": {
+    "node": "18"
+  },
+  "scripts": {
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.0.0",
+    "firebase-functions": "^5.0.0"
+  }
+}

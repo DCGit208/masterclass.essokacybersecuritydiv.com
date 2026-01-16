@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Applications - write only from client, read only for admin
+    match /applications/{applicationId} {
+      allow write: if true; // Allow anyone to submit
+      allow read: if false; // No public reads
+    }
+    
+    // Partners - write only from client, read only for admin
+    match /partners/{partnerId} {
+      allow write: if true; // Allow anyone to register
+      allow read: if false; // No public reads
+    }
+  }
+}

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaUser, FaBriefcase, FaEnvelope, FaPhone, FaGraduationCap, FaDollarSign, FaCheckCircle, FaTimes, FaSpinner } from "react-icons/fa"
+import { API_ENDPOINTS } from '@/config/firebase'
 
 interface FormData {
   // Step 1: Personal Info
@@ -119,7 +120,7 @@ export default function CEHApplicationForm({ onClose, referralCode }: Applicatio
     setIsSubmitting(true)
     
     try {
-      const response = await fetch("/api/ceh-application", {
+      const response = await fetch(API_ENDPOINTS.cehApplication, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
