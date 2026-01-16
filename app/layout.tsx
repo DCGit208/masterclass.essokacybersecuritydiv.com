@@ -109,7 +109,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${rajdhani.variable} font-sans antialiased`}>
         <ConditionalNavbar />
-        <main className="min-h-screen">
+        <main className="min-h-screen pt-24">
           {children}
         </main>
         <ConditionalFooter />
