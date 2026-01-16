@@ -1,13 +1,28 @@
 const fs = require('fs');
 const path = require('path');
 
-// Copy partners.html to partners/index.html to fix directory 403 error
-const partnersHtml = path.join(__dirname, '../out/partners.html');
-const partnersIndex = path.join(__dirname, '../out/partners/index.html');
+// Copy HTML files to directory index.html to fix 403 errors
+const copies = [
+  { from: 'partners.html', to: 'partners/index.html' },
+  { from: 'admin.html', to: 'admin/index.html' },
+  { from: 'admin/login.html', to: 'admin/login/index.html' },
+  { from: 'admin/dashboard.html', to: 'admin/dashboard/index.html' },
+];
 
-if (fs.existsSync(partnersHtml)) {
-  fs.copyFileSync(partnersHtml, partnersIndex);
-  console.log('✓ Copied partners.html to partners/index.html');
-} else {
-  console.log('⚠ partners.html not found');
-}
+copies.forEach(({ from, to }) => {
+  const fromPath = path.join(__dirname, '../out', from);
+  const toPath = path.join(__dirname, '../out', to);
+  
+  if (fs.existsSync(fromPath)) {
+    // Create directory if it doesn't exist
+    const dir = path.dirname(toPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    fs.copyFileSync(fromPath, toPath);
+    console.log(`✓ Copied ${from} to ${to}`);
+  } else {
+    console.log(`⚠ ${from} not found`);
+  }
+});
+
