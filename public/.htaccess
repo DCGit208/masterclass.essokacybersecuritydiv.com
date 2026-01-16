@@ -11,10 +11,10 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-# If a directory exists but has a sibling .html file (e.g., /partners/ and /partners.html), serve the .html file
+# If a directory is requested and a sibling .html exists (e.g., /partners/ -> partners.html), serve the .html file
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+)$ $1.html [L]
+RewriteRule ^(.+?)/$ /$1.html [L]
 
 # Handle Next.js static export routes
 # Directories: serve their index.html instead of directory listing
