@@ -4,7 +4,7 @@
   "description": "Masterclass platform for Essoka Cybersecurity Division",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/post-build.js",
     "start": "next start",
     "lint": "next lint",
     "video:preview": "remotion preview video/Root.tsx",
