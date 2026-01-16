@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
-import { getFirestore, collection, getDocs, doc, updateDoc, query, orderBy, where } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, doc, updateDoc } from 'firebase/firestore';
+import { initializeApp, getApps } from 'firebase/app';
 
 // Firebase config from environment
 const firebaseConfig = {
@@ -16,9 +16,20 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+// Initialize Firebase only once
+let app: any = null;
+let auth: any = null;
+let db: any = null;
+
+const initFirebase = () => {
+  if (getApps().length === 0) {
+    app = initializeApp(firebaseConfig);
+  } else {
+    app = getApps()[0];
+  }
+  auth = getAuth(app);
+  db = getFirestore(app);
+};
 
 export default function AdminDashboard() {
   const router = useRouter();
@@ -44,6 +55,9 @@ export default function AdminDashboard() {
   });
 
   useEffect(() => {
+    // Initialize Firebase on client only
+    initFirebase();
+    
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
