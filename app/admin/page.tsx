@@ -36,11 +36,11 @@ export default function AdminDashboard() {
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'partners' | 'applications' | 'reports'>('partners');
-  
   // Login state
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState('');
+  const [firebaseError, setFirebaseError] = useState('');
 
   // Data states
   const [partners, setPartners] = useState<any[]>([]);
@@ -55,6 +55,12 @@ export default function AdminDashboard() {
   });
 
   useEffect(() => {
+    // Check if Firebase config is available
+    if (!process.env.NEXT_PUBLIC_FIREBASE_API_KEY || !process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID) {
+      setFirebaseError('Firebase configuration missing. Check environment variables.');
+      return;
+    }
+
     // Initialize Firebase on client only
     initFirebase();
     
@@ -169,6 +175,28 @@ export default function AdminDashboard() {
     return (
       <div className="min-h-screen bg-cyber-darker flex items-center justify-center">
         <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+
+  if (firebaseError) {
+    return (
+      <div className="min-h-screen bg-cyber-darker flex items-center justify-center">
+        <div className="bg-cyber-dark border border-red-500 rounded-xl p-8 max-w-md w-full">
+          <h1 className="text-3xl font-bold text-red-500 mb-4 font-rajdhani">Configuration Error</h1>
+          <p className="text-gray-300 mb-4">{firebaseError}</p>
+          <p className="text-gray-400 text-sm">
+            Make sure `.env.local` has all Firebase environment variables:
+          </p>
+          <ul className="text-gray-400 text-xs mt-3 space-y-1">
+            <li>• NEXT_PUBLIC_FIREBASE_API_KEY</li>
+            <li>• NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN</li>
+            <li>• NEXT_PUBLIC_FIREBASE_PROJECT_ID</li>
+            <li>• NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET</li>
+            <li>• NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID</li>
+            <li>• NEXT_PUBLIC_FIREBASE_APP_ID</li>
+          </ul>
+        </div>
       </div>
     );
   }
