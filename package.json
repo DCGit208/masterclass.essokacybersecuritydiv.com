@@ -15,6 +15,7 @@
     "@runwayml/sdk": "^3.11.0",
     "date-fns": "^3.0.0",
     "elevenlabs": "^1.59.0",
+    "firebase": "^12.8.0",
     "framer-motion": "^10.16.16",
     "next": "^14.0.4",
     "nodemailer": "^7.0.12",
