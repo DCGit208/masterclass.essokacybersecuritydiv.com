@@ -1,32 +1,26 @@
 # Enable URL rewriting
 RewriteEngine On
 
-# Remove trailing slashes
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [R=301,L]
+# Serve index.html for directory routes that have subdirectories (e.g., /partners/ has dashboard, register)
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*)$ $1/index.html [L]
 
-# Serve HTML files without .html extension
+# Serve sibling .html file when directory is requested without index (e.g., /partners/ -> partners.html)
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
+
+# Serve HTML files without .html extension (non-directory, non-file paths)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-# If a directory is requested and a sibling .html exists (e.g., /partners/ -> partners.html), serve the .html file
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+?)/$ /$1.html [L]
-
-# Handle Next.js static export routes
-# Directories: serve their index.html instead of directory listing
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{REQUEST_FILENAME}/index.html -f
-RewriteRule ^(.*)$ $1/index.html [L]
-
-# Non-file/non-directory paths: serve nested index.html if it exists
-RewriteCond %{REQUEST_FILENAME} !-f
+# Remove trailing slashes for non-directory files (must be after HTML rules)
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}/index.html -f
-RewriteRule ^(.*)$ $1/index.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)/$ /$1 [R=301,L]
 
 # Error pages
 ErrorDocument 404 /404.html
