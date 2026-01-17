@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
+import { FaChevronDown, FaChevronUp, FaEnvelope, FaPhone } from 'react-icons/fa'
 
 const CEHFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -158,13 +158,15 @@ const CEHFAQ = () => {
           </div>
           
           <div className="mt-8 pt-8 border-t border-cyber-accent/20">
-            <p className="text-gray-400 text-sm mb-2">Need to speak with us directly?</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-              <a href="mailto:dr.coachachu@essokacybersecuritydiv.com" className="text-cyber-accent hover:text-cyber-accent/80">
-                📧 dr.coachachu@essokacybersecuritydiv.com
+            <p className="text-gray-400 text-sm mb-4">Need to speak with us directly?</p>
+            <div className="flex gap-6 justify-center">
+              <a href="mailto:dr.coachachu@essokacybersecuritydiv.com" className="text-cyber-accent hover:text-cyber-accent/80 flex flex-col items-center gap-2" aria-label="Email us">
+                <FaEnvelope className="text-2xl" />
+                <span className="text-xs">Email</span>
               </a>
-              <a href="tel:+237677604100" className="text-cyber-accent hover:text-cyber-accent/80">
-                📞 +237 677 60 41 00
+              <a href="tel:+237677604100" className="text-cyber-accent hover:text-cyber-accent/80 flex flex-col items-center gap-2" aria-label="Call us">
+                <FaPhone className="text-2xl" />
+                <span className="text-xs">Call</span>
               </a>
             </div>
           </div>

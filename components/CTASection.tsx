@@ -29,25 +29,19 @@ const CTASection = () => {
             <motion.a
               href="mailto:dr.coachachu@essokacybersecuritydiv.com"
               whileHover={{ scale: 1.05 }}
-              className="bg-cyber-darker/80 border-2 border-cyber-accent/30 rounded-xl p-6 hover:border-cyber-accent transition-all flex items-center justify-center space-x-3 group"
+              className="bg-cyber-darker/80 border-2 border-cyber-accent/30 rounded-xl p-6 hover:border-cyber-accent transition-all flex flex-col items-center justify-center group"
             >
-              <FaEnvelope className="text-2xl text-cyber-accent group-hover:scale-110 transition-transform" />
-              <div className="text-left">
-                <div className="text-gray-400 text-sm">Email Us</div>
-                <div className="text-white font-semibold text-sm">dr.coachachu@essokacybersecuritydiv.com</div>
-              </div>
+              <FaEnvelope className="text-4xl text-cyber-accent group-hover:scale-110 transition-transform mb-2" />
+              <div className="text-gray-400 text-sm">Email Us</div>
             </motion.a>
 
             <motion.a
               href="tel:+237677604100"
               whileHover={{ scale: 1.05 }}
-              className="bg-cyber-darker/80 border-2 border-cyber-accent/30 rounded-xl p-6 hover:border-cyber-accent transition-all flex items-center justify-center space-x-3 group"
+              className="bg-cyber-darker/80 border-2 border-cyber-accent/30 rounded-xl p-6 hover:border-cyber-accent transition-all flex flex-col items-center justify-center group"
             >
-              <FaPhone className="text-2xl text-cyber-accent group-hover:scale-110 transition-transform" />
-              <div className="text-left">
-                <div className="text-gray-400 text-sm">Call Us (CAM)</div>
-                <div className="text-white font-semibold text-lg">+237 677 60 41 00</div>
-              </div>
+              <FaPhone className="text-4xl text-cyber-accent group-hover:scale-110 transition-transform mb-2" />
+              <div className="text-gray-400 text-sm">Call Us (CAM)</div>
             </motion.a>
 
             <motion.a

@@ -60,15 +60,13 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4 font-rajdhani">Contact Us</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2 text-gray-400">
-                <FaEnvelope className="text-cyber-accent mt-1 flex-shrink-0" />
-                <a href="mailto:dr.coachachu@essokacybersecuritydiv.com" className="hover:text-cyber-accent transition-colors">
-                  dr.coachachu@essokacybersecuritydiv.com
+                <a href="mailto:dr.coachachu@essokacybersecuritydiv.com" className="hover:text-cyber-accent transition-colors" aria-label="Email us">
+                  <FaEnvelope className="text-cyber-accent text-xl" />
                 </a>
               </li>
               <li className="flex items-start space-x-2 text-gray-400">
-                <FaPhone className="text-cyber-accent mt-1 flex-shrink-0" />
-                <a href="tel:+237677604100" className="hover:text-cyber-accent transition-colors">
-                  +237 677 60 41 00
+                <a href="tel:+237677604100" className="hover:text-cyber-accent transition-colors" aria-label="Call us">
+                  <FaPhone className="text-cyber-accent text-xl" />
                 </a>
               </li>
               <li className="flex items-start space-x-2 text-gray-400">

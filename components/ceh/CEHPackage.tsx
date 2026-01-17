@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaBook, FaTicketAlt, FaMicroscope, FaRedo, FaLaptopCode, FaGamepad, FaVideo, FaCheckCircle } from 'react-icons/fa'
+import { FaBook, FaTicketAlt, FaMicroscope, FaRedo, FaLaptopCode, FaGamepad, FaVideo, FaCheckCircle, FaEnvelope, FaPhone } from 'react-icons/fa'
 
 const CEHPackage = () => {
   const packageItems = [
@@ -123,15 +123,17 @@ const CEHPackage = () => {
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <a 
               href="mailto:dr.coachachu@essokacybersecuritydiv.com"
-              className="bg-cyber-accent text-cyber-darker px-10 py-4 rounded-xl font-bold text-lg hover:bg-cyber-accent/90 transition-all hover:shadow-2xl hover:shadow-cyber-accent/50"
+              className="bg-cyber-accent text-cyber-darker px-10 py-4 rounded-xl font-bold text-lg hover:bg-cyber-accent/90 transition-all hover:shadow-2xl hover:shadow-cyber-accent/50 flex items-center gap-2"
             >
-              📧 Inquire Now & Register
+              <FaEnvelope className="text-xl" />
+              <span>Inquire Now & Register</span>
             </a>
             <a 
               href="tel:+237677604100"
-              className="border-2 border-cyber-accent text-cyber-accent px-10 py-4 rounded-xl font-bold text-lg hover:bg-cyber-accent/10 transition-all"
+              className="border-2 border-cyber-accent text-cyber-accent px-10 py-4 rounded-xl font-bold text-lg hover:bg-cyber-accent/10 transition-all flex items-center gap-2"
             >
-              📞 +237 677 60 41 00 - CAM
+              <FaPhone className="text-xl" />
+              <span>Call Us (CAM)</span>
             </a>
           </div>
         </motion.div>
