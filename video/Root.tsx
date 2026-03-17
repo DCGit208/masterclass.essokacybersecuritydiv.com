@@ -15,8 +15,8 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           instructorName: "Dr. Coach Achu Gustave",
           awardTitle: "EC-Council Global Instructor of the Year 2022",
-          deadline: "January 25, 2026",
-          cohortStart: "February 10, 2026",
+          deadline: "April 1, 2026",
+          cohortStart: "April 15, 2026",
           maxSlots: 20,
         }}
       />

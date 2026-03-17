@@ -54,7 +54,7 @@ const CEHFAQ = () => {
     },
     {
       question: "How soon can I start after applying?",
-      answer: "Timeline: (1) Apply → Review within 24-48 hours, (2) Fit call scheduled within 3-5 days, (3) If approved → Enrollment details sent immediately, (4) Access granted 1 week before cohort start for pre-work. Next cohort starts March 15, 2026. Apply early—seats fill fast."
+      answer: "Timeline: (1) Apply → Review within 24-48 hours, (2) Fit call scheduled within 3-5 days, (3) If approved → Enrollment details sent immediately, (4) Access granted 1 week before cohort start for pre-work. Next cohort starts April 15, 2026. Apply early—seats fill fast."
     }
   ]
 

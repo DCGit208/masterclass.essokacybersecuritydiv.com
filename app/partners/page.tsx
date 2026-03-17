@@ -62,8 +62,8 @@ const PartnerLanding = () => {
           <div>
             <h3 className="text-2xl font-bold text-white font-rajdhani mb-3">Program Snapshot</h3>
             <ul className="text-gray-300 space-y-2 text-sm">
-              <li>• Cohort Start: February 10, 2026</li>
-              <li>• Application Deadline: January 25, 2026</li>
+              <li>• Cohort Start: April 15, 2026</li>
+              <li>• Application Deadline: April 1, 2026</li>
               <li>• Max 20 business leaders (interview-only)</li>
               <li>• Investment: $5,000 (payment plans available)</li>
             </ul>

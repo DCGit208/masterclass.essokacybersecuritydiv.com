@@ -64,7 +64,7 @@ export default function CEHMasterclass() {
         '@type': 'Person',
         name: 'Dr. Coach Achu Gustave'
       },
-      startDate: '2026-03-15'
+      startDate: '2026-04-15'
     },
     educationalLevel: 'Advanced',
     audience: {

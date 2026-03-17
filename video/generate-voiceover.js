@@ -32,7 +32,7 @@ const SCRIPT_SEGMENTS = [
   },
   {
     scene: 5,
-    text: "February 10th cohort. 20 slots. Application and interview required. If you're ready to go from theory to threat actor-level execution—apply now. Deadline: January 25th.",
+    text: "April 15th cohort. 20 slots. Application and interview required. If you're ready to go from theory to threat actor-level execution—apply now. Deadline: April 1st.",
     outputFile: "scene5-cta.mp3"
   }
 ];

@@ -22,13 +22,13 @@ export const CEH_ELITE_CONFIG = {
   // ============================================
   
   /** When the cohort starts (display format) */
-  cohortStartDate: "February 10, 2026",
+  cohortStartDate: "April 15, 2026",
   
   /** Application deadline (display format) - URGENT: Only 19 days left! */
-  applicationDeadline: "January 25, 2026",
+  applicationDeadline: "April 1, 2026",
   
   /** Countdown timer target (ISO 8601 format for CEHCountdown component) */
-  countdownTarget: "2026-02-10T00:00:00",
+  countdownTarget: "2026-04-15T00:00:00",
   
   
   // ============================================
