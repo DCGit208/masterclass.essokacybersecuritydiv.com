@@ -13,10 +13,10 @@ const rajdhani = Rajdhani({
 export const metadata: Metadata = {
   metadataBase: new URL('https://masterclass.essokacybersecuritydiv.com'),
   title: {
-    default: 'ECSD Masterclass - Elite Cybersecurity Training | CEH Master Certification 2026',
+    default: 'ECSD Masterclass – Cybersecurity Market Mentorship & Elite Certification Pathways',
     template: '%s | ECSD Masterclass'
   },
-  description: 'World-class cybersecurity masterclass programs. CEH Elite v13 Master certification, VAPT training, cyber forensics, and enterprise security solutions. Only 20 slots available for $5,000.',
+  description: 'Mentorship-driven cybersecurity programs designed to move professionals beyond certifications into real market positioning, contract readiness, and revenue generation across offensive security, network defense, forensics, and governance.',
   keywords: 'cybersecurity training, CEH Master certification, ethical hacking course, penetration testing training, VAPT certification, cybersecurity masterclass, EC-Council CEH, cyber security course Cameroon, offensive security training, enterprise security training, corporate cybersecurity training, professional hacking course, advanced penetration testing, security analyst certification, cybersecurity for business, IT security training Cameroon, certified ethical hacker training, vulnerability assessment training, security operations training, executive security training',
   authors: [{ name: 'Essoka Cybersecurity Division' }],
   creator: 'Essoka Cybersecurity Division',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://masterclass.essokacybersecuritydiv.com',
     siteName: 'ECSD Masterclass',
-    title: 'ECSD Masterclass - Elite Cybersecurity Training | CEH Master Certification',
-    description: 'World-class CEH Elite v13 Master certification and cybersecurity training programs. Transform your team with market-leading offensive security expertise.',
+    title: 'ECSD Masterclass – Cybersecurity Market Mentorship & Elite Certification Pathways',
+    description: 'Mentorship-driven cybersecurity programs designed to move professionals beyond certifications into real market positioning, contract readiness, and revenue generation across offensive security, network defense, forensics, and governance.',
     images: [
       {
         url: 'https://masterclass.essokacybersecuritydiv.com/og-ceh-elite.jpg',
