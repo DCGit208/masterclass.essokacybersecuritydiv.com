@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from 'react'
-import { API_ENDPOINTS } from '@/config/firebase'
+import { db } from '@/config/firebase'
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
 
 const RegisterPartner = () => {
   const [formState, setFormState] = useState({
@@ -26,17 +27,16 @@ const RegisterPartner = () => {
     setIsSubmitting(true)
 
     try {
-      const res = await fetch(API_ENDPOINTS.partnerRegister, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formState),
+      await addDoc(collection(db, 'partners'), {
+        ...formState,
+        timestamp: serverTimestamp(),
+        status: 'pending_approval',
+        totalReferrals: 0,
+        totalEarnings: 0,
       })
-      if (res.ok) {
-        setIsSuccess(true)
-      } else {
-        alert('Unable to submit. Please try again or email dr.coachachu@essokacybersecuritydiv.com')
-      }
+      setIsSuccess(true)
     } catch (error) {
+      console.error('Partner registration error:', error)
       alert('Unable to submit. Please try again or email dr.coachachu@essokacybersecuritydiv.com')
     } finally {
       setIsSubmitting(false)
