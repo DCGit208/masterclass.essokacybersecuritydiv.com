@@ -17,6 +17,7 @@ const RegisterPartner = () => {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
+  const [errorMsg, setErrorMsg] = useState('')
 
   const handleChange = (key: string, value: string) => {
     setFormState((prev) => ({ ...prev, [key]: value }))
@@ -25,19 +26,27 @@ const RegisterPartner = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setErrorMsg('')
+
+    const timeout = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error('Request timed out after 15 seconds')), 15000)
+    )
 
     try {
-      await addDoc(collection(db, 'partners'), {
-        ...formState,
-        timestamp: serverTimestamp(),
-        status: 'pending_approval',
-        totalReferrals: 0,
-        totalEarnings: 0,
-      })
+      await Promise.race([
+        addDoc(collection(db, 'partners'), {
+          ...formState,
+          timestamp: serverTimestamp(),
+          status: 'pending_approval',
+          totalReferrals: 0,
+          totalEarnings: 0,
+        }),
+        timeout,
+      ])
       setIsSuccess(true)
-    } catch (error) {
+    } catch (error: any) {
       console.error('Partner registration error:', error)
-      alert('Unable to submit. Please try again or email dr.coachachu@essokacybersecuritydiv.com')
+      setErrorMsg(error?.message || 'Unknown error. Please email dr.coachachu@essokacybersecuritydiv.com')
     } finally {
       setIsSubmitting(false)
     }
@@ -110,6 +119,11 @@ const RegisterPartner = () => {
               <label className="block text-sm text-gray-300 mb-1">Notes (audience, regions, channels)</label>
               <textarea className="w-full bg-cyber-darker border border-cyber-accent/30 rounded-lg px-4 py-3 text-white" rows={3} value={formState.notes} onChange={(e) => handleChange('notes', e.target.value)} />
             </div>
+            {errorMsg && (
+              <div className="bg-red-900/40 border border-red-500/50 rounded-lg px-4 py-3 text-red-300 text-sm">
+                <strong>Error:</strong> {errorMsg}
+              </div>
+            )}
             <button type="submit" disabled={isSubmitting} className="w-full bg-cyber-accent text-cyber-darker font-bold py-3 rounded-lg hover:bg-cyber-accent/90 transition-all disabled:opacity-60">
               {isSubmitting ? 'Submitting...' : 'Submit & Get My Link'}
             </button>
