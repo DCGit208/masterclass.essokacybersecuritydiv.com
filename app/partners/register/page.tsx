@@ -1,10 +1,20 @@
 "use client"
 
 import { useState } from 'react'
-import { db } from '@/config/firebase'
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
+import { useRouter } from 'next/navigation'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { doc, setDoc, serverTimestamp } from 'firebase/firestore'
+import { auth, db } from '@/config/firebase'
+
+const generateTempPassword = (): string => {
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789'
+  const array = new Uint8Array(12)
+  crypto.getRandomValues(array)
+  return Array.from(array).map((b) => chars[b % chars.length]).join('')
+}
 
 const RegisterPartner = () => {
+  const router = useRouter()
   const [formState, setFormState] = useState({
     fullName: '',
     email: '',
@@ -16,7 +26,6 @@ const RegisterPartner = () => {
     notes: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
 
   const handleChange = (key: string, value: string) => {
@@ -33,35 +42,35 @@ const RegisterPartner = () => {
     )
 
     try {
-      await Promise.race([
-        addDoc(collection(db, 'partners'), {
-          ...formState,
-          timestamp: serverTimestamp(),
-          status: 'pending_approval',
-          totalReferrals: 0,
-          totalEarnings: 0,
-        }),
+      const tempPassword = generateTempPassword()
+
+      const userCredential = await Promise.race([
+        createUserWithEmailAndPassword(auth, formState.email, tempPassword),
         timeout,
       ])
-      setIsSuccess(true)
+      const uid = userCredential.user.uid
+
+      await setDoc(doc(db, 'partners', uid), {
+        ...formState,
+        uid,
+        tempPassword,
+        timestamp: serverTimestamp(),
+        status: 'pending_approval',
+        totalReferrals: 0,
+        totalEarnings: 0,
+      })
+
+      router.push('/partners/dashboard')
     } catch (error: any) {
       console.error('Partner registration error:', error)
-      setErrorMsg(error?.message || 'Unknown error. Please email dr.coachachu@essokacybersecuritydiv.com')
+      if (error?.code === 'auth/email-already-in-use') {
+        setErrorMsg('This email is already registered. Go to the login page.')
+      } else {
+        setErrorMsg(error?.message || 'Unknown error. Please email dr.coachachu@essokacybersecuritydiv.com')
+      }
     } finally {
       setIsSubmitting(false)
     }
-  }
-
-  if (isSuccess) {
-    return (
-      <div className="min-h-screen bg-cyber-darker flex items-center justify-center px-4 py-16">
-        <div className="bg-cyber-dark/70 border border-cyber-accent/30 rounded-xl p-8 max-w-lg w-full text-center">
-          <h1 className="text-3xl font-bold text-white font-rajdhani mb-4">You&apos;re in!</h1>
-          <p className="text-gray-300 mb-4">We received your partner registration. We will activate your referral code and send your partner kit within 24 hours.</p>
-          <p className="text-cyber-accent font-semibold">Check your email for confirmation.</p>
-        </div>
-      </div>
-    )
   }
 
   return (
