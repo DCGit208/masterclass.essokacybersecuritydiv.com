@@ -23,6 +23,7 @@ const Navbar = () => {
     { name: 'CEH Elite v13', href: '/masterclass/ceh-elite-v13' },
     { name: 'About', href: '/#about' },
     { name: 'Contact', href: '/#contact' },
+    { name: 'Partners', href: '/partners' },
   ]
 
   return (
